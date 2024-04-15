@@ -115,15 +115,19 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/include"
+					"path" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src"
+					"path" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src"
 				},
 				{
 					"backtrace" : 7,
-					"path" : "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src"
+					"path" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src"
+				},
+				{
+					"backtrace" : 7,
+					"path" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw"
 				}
 			],
 			"language" : "C",

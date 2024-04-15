@@ -1,4 +1,4 @@
-# Install script for directory: D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw
+# Install script for directory: C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/msys64/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/MinGW/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src/cmake_install.cmake")
+  include("C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src/cmake_install.cmake")
 
 endif()
 

@@ -6,7 +6,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.29.1/CMakeSystem.cmake"
+			"path" : "build/CMakeFiles/3.29.0-rc2/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -20,11 +20,11 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.29.1/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/3.29.0-rc2/CMakeCCompiler.cmake"
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.29.1/CMakeCXXCompiler.cmake"
+			"path" : "build/CMakeFiles/3.29.0-rc2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -88,7 +88,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.29.1/CMakeRCCompiler.cmake"
+			"path" : "build/CMakeFiles/3.29.0-rc2/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -264,8 +264,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-		"source" : "D:/2nd_term/graphics/project/Al-Dofda3a"
+		"build" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+		"source" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a"
 	},
 	"version" : 
 	{

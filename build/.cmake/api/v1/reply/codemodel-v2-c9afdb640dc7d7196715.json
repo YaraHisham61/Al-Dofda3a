@@ -90,14 +90,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GAME_APPLICATION::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GAME_APPLICATION-Debug-3aaec269c6d7f0a86d72.json",
+					"jsonFile" : "target-GAME_APPLICATION-Debug-12a661d5a6cfc6f82d64.json",
 					"name" : "GAME_APPLICATION",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "glfw::@31bd9730e6b8c71cc656",
-					"jsonFile" : "target-glfw-Debug-a46802323c06014c10a7.json",
+					"jsonFile" : "target-glfw-Debug-3eeff566648fa6fbf6de.json",
 					"name" : "glfw",
 					"projectIndex" : 1
 				}
@@ -107,8 +107,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-		"source" : "D:/2nd_term/graphics/project/Al-Dofda3a"
+		"build" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+		"source" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a"
 	},
 	"version" : 
 	{

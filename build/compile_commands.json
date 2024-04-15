@@ -1,242 +1,242 @@
 [
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\main.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\main.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/main.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/main.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\main.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\main.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\main.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\main.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\application.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\application.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/application.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/application.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\application.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\application.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\application.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\application.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\asset-loader.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\asset-loader.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/asset-loader.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/asset-loader.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\asset-loader.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\asset-loader.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\asset-loader.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\asset-loader.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\shader\\shader.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\shader\\shader.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/shader/shader.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/shader/shader.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\shader\\shader.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\shader\\shader.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\shader\\shader.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\shader\\shader.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\mesh\\mesh-utils.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\mesh\\mesh-utils.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/mesh/mesh-utils.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/mesh/mesh-utils.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\mesh\\mesh-utils.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\mesh\\mesh-utils.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\mesh\\mesh-utils.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\mesh\\mesh-utils.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\sampler.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\texture\\sampler.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/texture/sampler.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/texture/sampler.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\sampler.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\texture\\sampler.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\texture\\sampler.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\sampler.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\texture-utils.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\texture\\texture-utils.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/texture/texture-utils.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/texture/texture-utils.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\texture-utils.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\texture\\texture-utils.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\texture\\texture-utils.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\texture-utils.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\screenshot.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\texture\\screenshot.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/texture/screenshot.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/texture/screenshot.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\screenshot.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\texture\\screenshot.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\texture\\screenshot.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\texture\\screenshot.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\material\\pipeline-state.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\material\\pipeline-state.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/material/pipeline-state.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/material/pipeline-state.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\material\\pipeline-state.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\material\\pipeline-state.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\material\\pipeline-state.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\material\\pipeline-state.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\material\\material.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\material\\material.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/material/material.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/material/material.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\material\\material.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\material\\material.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\material\\material.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\material\\material.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\transform.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\ecs\\transform.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/ecs/transform.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/ecs/transform.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\transform.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\ecs\\transform.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\ecs\\transform.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\transform.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\entity.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\ecs\\entity.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/ecs/entity.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/ecs/entity.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\entity.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\ecs\\entity.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\ecs\\entity.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\entity.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\world.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\ecs\\world.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/ecs/world.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/ecs/world.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\world.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\ecs\\world.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\ecs\\world.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\ecs\\world.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\camera.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\components\\camera.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/components/camera.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/components/camera.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\camera.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\camera.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\camera.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\camera.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\mesh-renderer.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\components\\mesh-renderer.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/components/mesh-renderer.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/components/mesh-renderer.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\mesh-renderer.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\mesh-renderer.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\mesh-renderer.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\mesh-renderer.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\free-camera-controller.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\components\\free-camera-controller.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/components/free-camera-controller.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/components/free-camera-controller.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\free-camera-controller.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\free-camera-controller.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\free-camera-controller.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\free-camera-controller.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\movement.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\components\\movement.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/components/movement.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/components/movement.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\movement.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\movement.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\components\\movement.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\components\\movement.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\systems\\forward-renderer.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\source\\common\\systems\\forward-renderer.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/source/common/systems/forward-renderer.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/source/common/systems/forward-renderer.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\systems\\forward-renderer.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\systems\\forward-renderer.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\source\\common\\systems\\forward-renderer.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\source\\common\\systems\\forward-renderer.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_C.rsp -g -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\glad\\src\\gl.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glad\\src\\gl.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glad/src/gl.c",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/vendor/glad/src/gl.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\glad\\src\\gl.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glad\\src\\gl.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glad\\src\\gl.c",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\vendor\\glad\\src\\gl.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\imgui\\imgui.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/imgui/imgui.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/vendor/imgui/imgui.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_demo.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\imgui\\imgui_demo.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/imgui/imgui_demo.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/vendor/imgui/imgui_demo.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_demo.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_demo.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_demo.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_demo.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_draw.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\imgui\\imgui_draw.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/imgui/imgui_draw.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/vendor/imgui/imgui_draw.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_draw.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_draw.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_draw.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_draw.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_widgets.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\imgui\\imgui_widgets.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/imgui/imgui_widgets.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/vendor/imgui/imgui_widgets.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_widgets.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_widgets.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_widgets.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_widgets.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_impl\\imgui_impl_glfw.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\imgui\\imgui_impl\\imgui_impl_glfw.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/imgui/imgui_impl/imgui_impl_glfw.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/vendor/imgui/imgui_impl/imgui_impl_glfw.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_impl\\imgui_impl_glfw.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_impl\\imgui_impl_glfw.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_impl\\imgui_impl_glfw.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_impl\\imgui_impl_glfw.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build",
-  "command": "c:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/GAME_APPLICATION.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_impl\\imgui_impl_opengl3.cpp.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\imgui\\imgui_impl\\imgui_impl_opengl3.cpp",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/imgui/imgui_impl/imgui_impl_opengl3.cpp",
-  "output": "CMakeFiles/GAME_APPLICATION.dir/vendor/imgui/imgui_impl/imgui_impl_opengl3.cpp.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/source/common -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glad/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glm -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/imgui -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/utils -g -std=c++17 -o CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_impl\\imgui_impl_opengl3.cpp.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_impl\\imgui_impl_opengl3.cpp",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\imgui\\imgui_impl\\imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles\\GAME_APPLICATION.dir\\vendor\\imgui\\imgui_impl\\imgui_impl_opengl3.cpp.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\context.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\context.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/context.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/context.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\context.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\context.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\init.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\init.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/init.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/init.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\init.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\init.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\input.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\input.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/input.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/input.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\input.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\input.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\monitor.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\monitor.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/monitor.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\monitor.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\monitor.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\vulkan.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/vulkan.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\vulkan.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\vulkan.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\window.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\window.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/window.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/window.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\window.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\window.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\win32_init.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/win32_init.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_init.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_init.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\win32_joystick.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/win32_joystick.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_joystick.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_joystick.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\win32_monitor.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/win32_monitor.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_monitor.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_monitor.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\win32_time.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/win32_time.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_time.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_time.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\win32_thread.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/win32_thread.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_thread.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_thread.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\win32_window.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/win32_window.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_window.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\win32_window.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\wgl_context.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/wgl_context.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\wgl_context.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\wgl_context.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\egl_context.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/egl_context.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\egl_context.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\egl_context.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj"
 },
 {
-  "directory": "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw/src",
-  "command": "c:\\msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c D:\\2nd_term\\graphics\\project\\Al-Dofda3a\\vendor\\glfw\\src\\osmesa_context.c",
-  "file": "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw/src/osmesa_context.c",
-  "output": "vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
+  "directory": "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/include -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw/src -IC:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw/deps/mingw -g -std=gnu99 -Wall -Wdeclaration-after-statement -o vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\osmesa_context.c",
+  "file": "C:\\Users\\20112\\Desktop\\Faculty\\Projects\\Graphics\\Al-Dofda3a\\vendor\\glfw\\src\\osmesa_context.c",
+  "output": "vendor\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj"
 }
 ]

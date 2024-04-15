@@ -27,7 +27,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/addr2line.exe"
+			"value" : "C:/MinGW/bin/addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -43,7 +43,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/ar.exe"
+			"value" : "C:/MinGW/bin/ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/2nd_term/graphics/project/Al-Dofda3a/build"
+			"value" : "c:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -103,23 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
-		},
-		{
-			"name" : "CMAKE_COLOR_MAKEFILE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enable/Disable color output during build."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -171,7 +155,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "c:/msys64/mingw64/bin/g++.exe"
+			"value" : "C:/MinGW/bin/g++.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -187,7 +171,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/gcc-ar.exe"
+			"value" : "C:/MinGW/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -203,7 +187,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/gcc-ranlib.exe"
+			"value" : "C:/MinGW/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -315,7 +299,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "c:/msys64/mingw64/bin/gcc.exe"
+			"value" : "C:/MinGW/bin/gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -331,7 +315,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/gcc-ar.exe"
+			"value" : "C:/MinGW/bin/gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -347,7 +331,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/gcc-ranlib.exe"
+			"value" : "C:/MinGW/bin/gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -459,7 +443,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/dlltool.exe"
+			"value" : "C:/MinGW/bin/dlltool.exe"
 		},
 		{
 			"name" : "CMAKE_EDIT_COMMAND",
@@ -599,7 +583,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/2nd_term/graphics/project/Al-Dofda3a/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -611,7 +595,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "MinGW Makefiles"
+			"value" : "Ninja"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -671,6 +655,30 @@
 				}
 			],
 			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_HAVE_PTHREADS_CREATE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have library pthreads"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "CMAKE_HAVE_PTHREAD_CREATE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Have library pthread"
+				}
+			],
+			"type" : "INTERNAL",
 			"value" : "1"
 		},
 		{
@@ -683,7 +691,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/2nd_term/graphics/project/Al-Dofda3a"
+			"value" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -967,7 +975,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/ld.exe"
+			"value" : "C:/MinGW/bin/ld.exe"
 		},
 		{
 			"name" : "CMAKE_MAKE_PROGRAM",
@@ -979,11 +987,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to a program."
+					"value" : "Program used to build from build.ninja files."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/mingw32-make.exe"
+			"value" : "C:/ninja-win/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -1079,7 +1087,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/nm.exe"
+			"value" : "C:/MinGW/bin/nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -1107,7 +1115,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/objcopy.exe"
+			"value" : "C:/MinGW/bin/objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -1123,7 +1131,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/objdump.exe"
+			"value" : "C:/MinGW/bin/objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1247,7 +1255,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/ranlib.exe"
+			"value" : "C:/MinGW/bin/ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER",
@@ -1263,7 +1271,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/windres.exe"
+			"value" : "C:/MinGW/bin/windres.exe"
 		},
 		{
 			"name" : "CMAKE_RC_COMPILER_WORKS",
@@ -1371,7 +1379,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/readelf.exe"
+			"value" : "C:/MinGW/bin/readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1591,7 +1599,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/msys64/mingw64/bin/strip.exe"
+			"value" : "C:/MinGW/bin/strip.exe"
 		},
 		{
 			"name" : "CMAKE_TAPI",
@@ -1635,7 +1643,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : ""
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
@@ -1659,7 +1667,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/2nd_term/graphics/project/Al-Dofda3a/build"
+			"value" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build"
 		},
 		{
 			"name" : "GFX-LAB_IS_TOP_LEVEL",
@@ -1683,7 +1691,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/2nd_term/graphics/project/Al-Dofda3a"
+			"value" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a"
 		},
 		{
 			"name" : "GLFW_BINARY_DIR",
@@ -1695,7 +1703,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/2nd_term/graphics/project/Al-Dofda3a/build/vendor/glfw"
+			"value" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/build/vendor/glfw"
 		},
 		{
 			"name" : "GLFW_BUILD_DOCS",
@@ -1767,7 +1775,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/2nd_term/graphics/project/Al-Dofda3a/vendor/glfw"
+			"value" : "C:/Users/20112/Desktop/Faculty/Projects/Graphics/Al-Dofda3a/vendor/glfw"
 		},
 		{
 			"name" : "GLFW_USE_HYBRID_HPG",
@@ -1803,7 +1811,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : ""
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
@@ -1827,7 +1835,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : ""
 		},
 		{
 			"name" : "_GLFW_HAS_ASLR",
