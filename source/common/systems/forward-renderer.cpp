@@ -62,7 +62,7 @@ namespace our
             /// color target
             colorTarget = new Texture2D();
             colorTarget->bind();
-            GLsizei levels =(GLsizei) glm::floor(glm::log2(glm::max<float>(windowSize.x, windowSize.y))) + 1;
+            int levels = (int)glm::floor(glm::log2((float)glm::max(windowSize.x, windowSize.y))) + 1;
             glTexStorage2D(GL_TEXTURE_2D, levels, GL_RGBA8, windowSize.x, windowSize.y);
             glFramebufferTexture2D(GL_DRAW_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, colorTarget->getOpenGLName(), 0);
             /// depth target
