@@ -26,12 +26,13 @@ namespace our
             //  Hints: the sky will be draw after the opaque objects so we would need depth testing but which depth funtion should we pick?
             //  We will draw the sphere from the inside, so what options should we pick for the face culling.
             PipelineState skyPipelineState{
-                .depthTesting.enabled = true,
-                .depthTesting.function = GL_LESS,
-                .faceCulling.enabled = true,
-                .faceCulling.culledFace = GL_FRONT,
+
             };
 
+            skyPipelineState.depthTesting.enabled = true;
+            skyPipelineState.depthTesting.function = GL_LEQUAL;
+            skyPipelineState.faceCulling.enabled = true;
+            skyPipelineState.faceCulling.culledFace = GL_FRONT;
             // Load the sky texture (note that we don't need mipmaps since we want to avoid any unnecessary blurring while rendering the sky)
             std::string skyTextureFile = config.value<std::string>("sky", "");
             Texture2D *skyTexture = texture_utils::loadImage(skyTextureFile, false);
@@ -167,12 +168,17 @@ namespace our
 
         // TODO: (Req 9) Modify the following line such that "cameraForward" contains a vector pointing the camera forward direction
         //  HINT: See how you wrote the CameraComponent::getViewMatrix, it should help you solve this one
-        glm::vec3 cameraForward = camera->getViewMatrix()[2];
+        auto owner = camera->getOwner();
+        auto tf = owner->getLocalToWorldMatrix();
+        glm::vec3 eye = tf * glm::vec4(0, 0, 0, 1);
+        glm::vec3 center = tf * glm::vec4(0, 0, -1, 1);
+
+        glm::vec3 cameraForward = glm::normalize(center - eye);
         std::sort(transparentCommands.begin(), transparentCommands.end(), [cameraForward](const RenderCommand &first, const RenderCommand &second)
                   {
             //TODO: (Req 9) Finish this function
             // HINT: the following return should return true "first" should be drawn before "second". 
-            return glm::dot(first.center,cameraForward)<glm::dot(second.center,cameraForward); });
+            return glm::dot(first.center,cameraForward)>glm::dot(second.center,cameraForward); });
 
         // TODO: (Req 9) Get the camera ViewProjection matrix and store it in VP
 
@@ -199,9 +205,10 @@ namespace our
         //  Don't forget to set the "transform" uniform to be equal the model-view-projection matrix for each render command
         for (int i = 0; i < opaqueCommands.size(); i++)
         {
-            glm::mat4 transform = VP * opaqueCommands[i].localToWorld;
-            opaqueCommands[i].material->shader->set("transmform", transform);
             opaqueCommands[i].material->setup();
+
+            glm::mat4 transform = VP * opaqueCommands[i].localToWorld;
+            opaqueCommands[i].material->shader->set("transform", transform);
             opaqueCommands[i].mesh->draw();
         }
         // If there is a sky material, draw the sky
@@ -212,7 +219,7 @@ namespace our
             // TODO: (Req 10) Get the camera position
             glm::vec3 cameraPosition = camera->getOwner()->getLocalToWorldMatrix()[3];
             // TODO: (Req 10) Create a model matrix for the sy such that it always follows the camera (sky sphere center = camera position)
-            glm::mat4 skyModelMatrix = glm::translate(cameraPosition);
+            glm::mat4 skyModelMatrix = glm::translate(camera->getOwner()->getLocalToWorldMatrix(), cameraPosition);
             // TODO: (Req 10) We want the sky to be drawn behind everything (in NDC space, z=1)
             //  We can acheive the is by multiplying by an extra matrix after the projection but what values should we put in it?
 
@@ -234,7 +241,7 @@ namespace our
         for (int i = 0; i < transparentCommands.size(); i++)
         {
             glm::mat4 transform = VP * transparentCommands[i].localToWorld;
-            transparentCommands[i].material->shader->set("transmform", transform);
+            transparentCommands[i].material->shader->set("transform", transform);
             transparentCommands[i].material->setup();
             transparentCommands[i].mesh->draw();
         }
