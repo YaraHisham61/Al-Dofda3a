@@ -168,12 +168,12 @@ namespace our
 
         // TODO: (Req 9) Modify the following line such that "cameraForward" contains a vector pointing the camera forward direction
         //  HINT: See how you wrote the CameraComponent::getViewMatrix, it should help you solve this one
-        auto owner = camera->getOwner();
-        auto tf = owner->getLocalToWorldMatrix();
-        glm::vec3 eye = tf * glm::vec4(0, 0, 0, 1);
-        glm::vec3 center = tf * glm::vec4(0, 0, -1, 1);
+        // auto owner = camera->getOwner();
+        // auto tf = owner->getLocalToWorldMatrix();
+        // glm::vec3 eye = tf * glm::vec4(0, 0, 0, 1);
+        // glm::vec3 center = tf * glm::vec4(0, 0, -1, 1);
 
-        glm::vec3 cameraForward = glm::normalize(center - eye);
+        glm::vec3 cameraForward = camera->getOwner()->getLocalToWorldMatrix() * glm::vec4(0, 0, 1, 1);
         std::sort(transparentCommands.begin(), transparentCommands.end(), [cameraForward](const RenderCommand &first, const RenderCommand &second)
                   {
             //TODO: (Req 9) Finish this function
@@ -226,8 +226,8 @@ namespace our
             glm::mat4 alwaysBehindTransform = glm::mat4(
                 1.0f, 0.0f, 0.0f, 0.0f,
                 0.0f, 1.0f, 0.0f, 0.0f,
-                0.0f, 0.0f, -1.0f, 1.0f,
-                0.0f, 0.0f, 0.0f, 1.0f);
+                0.0f, 0.0f, 0.0f, 0.0f,
+                0.0f, 0.0f, 1.0f, 1.0f);
 
             // TODO: (Req 10) set the "transform" uniform
             glm::mat4 transform = VP * skyModelMatrix * alwaysBehindTransform;
@@ -241,8 +241,8 @@ namespace our
         for (int i = 0; i < transparentCommands.size(); i++)
         {
             glm::mat4 transform = VP * transparentCommands[i].localToWorld;
-            transparentCommands[i].material->shader->set("transform", transform);
             transparentCommands[i].material->setup();
+            transparentCommands[i].material->shader->set("transform", transform);
             transparentCommands[i].mesh->draw();
         }
         // If there is a postprocess material, apply postprocessing

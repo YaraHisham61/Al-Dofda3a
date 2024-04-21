@@ -1,0 +1,8 @@
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/CMakeFiles/GAME_APPLICATION.dir
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/CMakeFiles/edit_cache.dir
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/CMakeFiles/rebuild_cache.dir
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/vendor/glfw/CMakeFiles/edit_cache.dir
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/vendor/glfw/CMakeFiles/rebuild_cache.dir
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/vendor/glfw/src/CMakeFiles/glfw.dir
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/vendor/glfw/src/CMakeFiles/edit_cache.dir
+D:/2nd_term/graphics/project/Al-Dofda3a/cmake-build-release/vendor/glfw/src/CMakeFiles/rebuild_cache.dir
