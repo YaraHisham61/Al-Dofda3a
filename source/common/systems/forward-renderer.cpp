@@ -168,12 +168,12 @@ namespace our
 
         // TODO: (Req 9) Modify the following line such that "cameraForward" contains a vector pointing the camera forward direction
         //  HINT: See how you wrote the CameraComponent::getViewMatrix, it should help you solve this one
-        // auto owner = camera->getOwner();
-        // auto tf = owner->getLocalToWorldMatrix();
-        // glm::vec3 eye = tf * glm::vec4(0, 0, 0, 1);
-        // glm::vec3 center = tf * glm::vec4(0, 0, -1, 1);
 
-        glm::vec3 cameraForward = camera->getOwner()->getLocalToWorldMatrix() * glm::vec4(0, 0, 1, 1);
+        auto M = camera->getOwner()->getLocalToWorldMatrix();
+        glm::vec3 cameraPoint = M * glm::vec4(0, 0, 0, 1);
+        glm::vec3 worldCenter = M * glm::vec4(0, 0, -1, 1);
+
+        glm::vec3 cameraForward = glm::normalize(worldCenter - cameraPoint);
         std::sort(transparentCommands.begin(), transparentCommands.end(), [cameraForward](const RenderCommand &first, const RenderCommand &second)
                   {
             //TODO: (Req 9) Finish this function
