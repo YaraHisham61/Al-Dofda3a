@@ -50,8 +50,8 @@ our::Texture2D *our::texture_utils::loadImage(const std::string &filename, bool 
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     }
 
-    GLint tex_loc = glGetUniformLocation(0, "tex");
-    glUniform1i(tex_loc, 0);
+    // GLint tex_loc = glGetUniformLocation(0, "tex"); //causes GL_INVALID_VALUE and GL_INVALID_OPERATION
+    // glUniform1i(tex_loc, 0);
     texture->unbind();
 
     stbi_image_free(pixels); // Free image data after uploading to GPU
