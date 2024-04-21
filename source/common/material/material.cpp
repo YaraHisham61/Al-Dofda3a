@@ -52,13 +52,14 @@ namespace our
     void TexturedMaterial::setup() const
     {
         // TODO: (Req 7) Write this function
-        TintedMaterial::setup();
+         TintedMaterial::setup();
         shader->set("alphaThreshold", alphaThreshold);
         glActiveTexture(GL_TEXTURE0);
 
         this->texture->bind();
-        this->sampler->bind(0);
-        this->shader->set("tex", 0);
+        if(sampler!=nullptr)
+            this->sampler->bind(this->texture->getOpenGLName());
+        this->shader->set("tex",this->texture->getOpenGLName());
     }
 
     // This function read the material data from a json object
