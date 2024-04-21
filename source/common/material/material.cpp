@@ -49,7 +49,8 @@ namespace our {
         glActiveTexture(GL_TEXTURE0);
 
         this->texture->bind();
-        this->sampler->bind(this->texture->getOpenGLName());
+        if(sampler!=nullptr)
+            this->sampler->bind(this->texture->getOpenGLName());
         this->shader->set("tex",this->texture->getOpenGLName());
     }
 
