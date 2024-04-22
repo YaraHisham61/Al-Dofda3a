@@ -49,6 +49,9 @@ namespace our
             // TODO: (Req 4) Write this function
             if (faceCulling.enabled)
             {
+                // if faceculling is activate we enable the opengl face culling 
+                // set the direction of the face to be culled 
+                // the direction of the front face
                 glEnable(GL_CULL_FACE);
                 glCullFace(faceCulling.culledFace);
                 glFrontFace(faceCulling.frontFace);
@@ -60,6 +63,8 @@ namespace our
 
             if (depthTesting.enabled)
             {
+                // if the depth buffer is needed we enable the opengl depth buffer
+                // then set the function or arranging depths in it 
                 glEnable(GL_DEPTH_TEST);
                 glDepthFunc(depthTesting.function);
             }
@@ -69,6 +74,9 @@ namespace our
             }
             if (blending.enabled)
             {
+                // if we enable the color blending we enable the opengl blending
+                // set the equation and the source and destination factor fot the function
+                // and the color for the blend
                 glEnable(GL_BLEND);
                 glBlendEquation(blending.equation);
                 glBlendFunc(blending.sourceFactor, blending.destinationFactor);

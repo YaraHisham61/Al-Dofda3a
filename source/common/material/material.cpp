@@ -35,6 +35,7 @@ namespace our
         // TODO: (Req 7) Write this function
         Material::setup();
         shader->set("tint", tint);
+        // send the value of tint to the shaders that use tint.
     }
 
     // This function read the material data from a json object
@@ -54,13 +55,18 @@ namespace our
         // TODO: (Req 7) Write this function
         TintedMaterial::setup();
         shader->set("alphaThreshold", alphaThreshold);
+        // send the value of alphaThreshold to the shaders that use it.
+
         glActiveTexture(GL_TEXTURE0);
 
         if (texture != nullptr)
+            // check if the texture is not null before usign it
             this->texture->bind();
         if (sampler != nullptr)
+            // check if the samler is not null before usign it
             this->sampler->bind(0);
         this->shader->set("tex", 0);
+        // send the value of tint to the shaders that use tint.
     }
 
     // This function read the material data from a json object

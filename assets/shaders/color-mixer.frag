@@ -26,6 +26,7 @@ uniform vec4 blue=vec4(0.,0.,1.,0.);
 void main(){
     
     vec4 color=vec4(fs_in.color,1.);
+    //convert the color to vector of lenght 4 by adding the homogienty term
     
     frag_color[0]=dot(color,red);
     frag_color[1]=dot(color,green);

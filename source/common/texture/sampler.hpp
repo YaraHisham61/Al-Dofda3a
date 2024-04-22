@@ -40,6 +40,7 @@ namespace our
         {
             // TODO: (Req 6) Complete this function
             glBindSampler(textureUnit, 0);
+            // we bind empty sampler as a way to unbind the previous setted sampler
         }
 
         // This function sets a sampler paramter where the value is of type "GLint"

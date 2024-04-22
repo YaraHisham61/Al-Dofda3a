@@ -13,9 +13,14 @@ namespace our
     {
         // TODO: (Req 3) Write this function
         glm::mat4 R = glm::yawPitchRoll(rotation.y, rotation.x, rotation.z);
+        // forming the rotation matrix using Euler angles.
         glm::mat4 T=glm::translate(glm::mat4(1.0f),position);
+        // formating the transloation in to 4x4 matrix(the translation will be in the last col).
         glm::mat4 S=glm::scale(glm::mat4(1.0f),scale);
+        // adding the scalling values to the diagonal of idedity matrix 4x4 
         glm::mat4 TRS=T*R*S;
+        // multipying the the transformation matrix to get the final 4x4 transformation matrix 
+        // in the order of the multipication with the vector of the point
 
         return TRS;
     }

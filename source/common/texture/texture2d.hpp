@@ -44,6 +44,7 @@ namespace our
         {
             // TODO: (Req 5) Complete this function
             glBindTexture(GL_TEXTURE_2D, 0);
+            // we bind empty texture as a way to unbind the previous binded texture
         }
 
         Texture2D(const Texture2D &) = delete;

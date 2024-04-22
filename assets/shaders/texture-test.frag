@@ -15,4 +15,5 @@ void main(){
     //TODO: (Req 5) Change the following line to read the fragment color
     // from the texture at the received texture coordinates
     frag_color = texture(tex, fs_in.tex_coord);
+    // get the texture form image and make any approximation needed to get the closest color
 }

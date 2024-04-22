@@ -170,10 +170,10 @@ namespace our
         //  HINT: See how you wrote the CameraComponent::getViewMatrix, it should help you solve this one
 
         auto M = camera->getOwner()->getLocalToWorldMatrix();
-        glm::vec3 cameraPoint = M * glm::vec4(0, 0, 0, 1);
-        glm::vec3 worldCenter = M * glm::vec4(0, 0, -1, 1);
+        glm::vec3 cameraPoint = M * glm::vec4(0, 0, 0, 1);  // get the camera position with respect to the world
+        glm::vec3 worldCenter = M * glm::vec4(0, 0, -1, 1); // get world center value
 
-        glm::vec3 cameraForward = glm::normalize(worldCenter - cameraPoint);
+        glm::vec3 cameraForward = glm::normalize(worldCenter - cameraPoint); // get the normalized vector from the camera to the worldcenter
         std::sort(transparentCommands.begin(), transparentCommands.end(), [cameraForward](const RenderCommand &first, const RenderCommand &second)
                   {
             //TODO: (Req 9) Finish this function
@@ -206,9 +206,9 @@ namespace our
         for (int i = 0; i < opaqueCommands.size(); i++)
         {
             opaqueCommands[i].material->setup();
-
             glm::mat4 transform = VP * opaqueCommands[i].localToWorld;
             opaqueCommands[i].material->shader->set("transform", transform);
+            
             opaqueCommands[i].mesh->draw();
         }
         // If there is a sky material, draw the sky

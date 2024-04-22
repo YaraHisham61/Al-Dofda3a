@@ -30,6 +30,7 @@ namespace our
         // a vertex array object to define how to read the vertex & element buffer during rendering
         Mesh(const std::vector<Vertex> &vertices, const std::vector<unsigned int> &elements)
         {
+            // generate the verix buffer and bind it and it will record the command till the next bind of other vertix buffer
 
             glGenVertexArrays(1, &VAO);
             glBindVertexArray(VAO);
@@ -37,36 +38,38 @@ namespace our
             glGenBuffers(1, &VBO);
             glBindBuffer(GL_ARRAY_BUFFER, VBO);
             glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
-
-
-
+            // generate and bind the vertex array object for all object will be drawn using thevertices stored in it
             glEnableVertexAttribArray(ATTRIB_LOC_POSITION);
             glVertexAttribPointer(ATTRIB_LOC_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+            // sending the attribute of pexils loaction to shaders to be used in the rendering process
             ////////////////// ////////////////////////////
             glEnableVertexAttribArray(ATTRIB_LOC_COLOR);
             glVertexAttribPointer(ATTRIB_LOC_COLOR, 4, GL_UNSIGNED_BYTE, true, sizeof(Vertex), (void *)(offsetof(Vertex, color)));
-
+            // sending the attribute of color to shaders to be used in the rendering process
             glEnableVertexAttribArray(ATTRIB_LOC_TEXCOORD);
             glVertexAttribPointer(ATTRIB_LOC_TEXCOORD, 2, GL_FLOAT, false, sizeof(Vertex), (void *)(offsetof(Vertex, tex_coord)));
-
+            // sending the attribute of texture coordinates to shaders to be used in the rendering process
             glEnableVertexAttribArray(ATTRIB_LOC_NORMAL);
             glVertexAttribPointer(ATTRIB_LOC_NORMAL, 3, GL_FLOAT, false, sizeof(Vertex), (void *)(offsetof(Vertex, normal)));
-            // TODO: (Req 2) Write this function
-            //  remember to store the number of elements in "elementCount" since you will need it for drawing
-            //  For the attribute locations, use the constants defined above: ATTRIB_LOC_POSITION, ATTRIB_LOC_COLOR, etc
+            // sending attribute normal to shaders to be used in the render process
+            //  TODO: (Req 2) Write this function
+            //   remember to store the number of elements in "elementCount" since you will need it for drawing
+            //   For the attribute locations, use the constants defined above: ATTRIB_LOC_POSITION, ATTRIB_LOC_COLOR, etc
             elementCount = elements.size();
-
+            // store the number of elements to be used in rendering
             glGenBuffers(1, &EBO);
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
             glBufferData(GL_ELEMENT_ARRAY_BUFFER, elements.size() * sizeof(unsigned int), elements.data(), GL_STATIC_DRAW);
+            // generate and bind the element buffer that holds the arrangement o pixels to be drawn
         }
 
         // this function should render the mesh
         void draw()
         {
             glBindVertexArray(VAO);
-
+// bind the vertix array that holds the attributes render commands 
             glDrawElements(GL_TRIANGLES, elementCount, GL_UNSIGNED_INT, (void *)0);
+            // the gl draw to make the gpu draw using the elements in the element buffer binded to the VAO using trangles.
             // TODO: (Req 2) Write this function
         }
 
@@ -77,6 +80,7 @@ namespace our
 
             glDeleteBuffers(1, &VBO);
             glDeleteBuffers(1, &EBO);
+            // deleting the VAO,VBO,EBO for memory saving and prevent using them in future
             // TODO: (Req 2) Write this function
         }
 

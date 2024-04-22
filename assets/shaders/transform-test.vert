@@ -16,6 +16,9 @@ uniform mat4 transform;
 
 void main(){
     //TODO: (Req 3) Change the next line to apply the transformation matrix
+    // multipy the transformation matrix 4x4 to te point vec4 to get the new position of the point
+    // the transformation is done in this order scaling then rotation followed by the translation
+    // so its multiplies from the left as it TRS matrix
     gl_Position=transform*vec4(position,1.0);
     // No need to change any of the following lines
     vs_out.position = position;

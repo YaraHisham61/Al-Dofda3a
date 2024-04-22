@@ -11,6 +11,7 @@ uniform mat4 transform;
 
 void main(){
     //TODO: (Req 7) Change the next line to apply the transformation matrix
+    // multiply by the trasform matrix to get the new poistion of the pexil
     gl_Position = transform*vec4(position, 1.0);
     vs_out.color = color;
 }
