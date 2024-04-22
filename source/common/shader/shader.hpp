@@ -94,6 +94,9 @@ namespace our
         ShaderProgram &operator=(const ShaderProgram &) = delete;
 
         // Question: Why do we delete the copy constructor and assignment operator?
+
+        // because we don't want to copy the shader program, we want to use the same one
+        //   if we don't delete them, we will have two shader programs.
     };
 
 }
