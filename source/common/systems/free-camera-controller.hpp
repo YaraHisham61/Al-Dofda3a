@@ -92,7 +92,7 @@ namespace our
             // We get the camera model matrix (relative to its parent) to compute the front, up and right directions
             glm::mat4 matrix = entity->localTransform.toMat4();
 
-            glm::vec3 front = glm::vec3(matrix * glm::vec4(0, 0, -5, 0)),
+            glm::vec3 front = glm::vec3(matrix * glm::vec4(0, 0, -1, 0)),
                       up = glm::vec3(matrix * glm::vec4(0, 1, 0, 0)),
                       right = glm::vec3(matrix * glm::vec4(1, 0, 0, 0));
 

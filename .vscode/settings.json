@@ -91,7 +91,7 @@
     "cmake.debugConfig": {
         "args": [
             "-c",
-            "./config/app.jsonc"
+            "./config/y.jsonc"
         ],
         "cwd": "${workspaceFolder}"
     }
