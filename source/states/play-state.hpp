@@ -62,7 +62,10 @@ class Playstate : public our::State
             getApp()->changeState("menu");
         }
     }
-
+    void onImmediateGui()
+    {
+        renderer.showGUI(&world);
+    }
     void onDestroy() override
     {
         // Don't forget to destroy the renderer

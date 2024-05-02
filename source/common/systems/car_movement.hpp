@@ -29,6 +29,10 @@ namespace our
                 if (movement)
                 {
                     entity->localTransform.position += deltaTime * movement->linearVelocity;
+                    if (entity->localTransform.position.x > 12)
+                    {
+                        entity->localTransform.position.x = -12;
+                    }
                 }
             }
         }

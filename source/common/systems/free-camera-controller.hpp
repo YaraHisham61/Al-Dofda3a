@@ -28,7 +28,9 @@ namespace our
         {
             this->app = app;
         }
-
+        bool b1 = false;
+        bool b2 = false;
+        int prevZ = 0;
         // This should be called every frame to update all entities containing a FreeCameraControllerComponent
         void update(World *world, float deltaTime)
         {
@@ -95,16 +97,27 @@ namespace our
             glm::vec3 front = glm::vec3(matrix * glm::vec4(0, 0, -1, 0)),
                       up = glm::vec3(matrix * glm::vec4(0, 1, 0, 0)),
                       right = glm::vec3(matrix * glm::vec4(1, 0, 0, 0));
-
             glm::vec3 current_sensitivity = controller->positionSensitivity;
             // If the LEFT SHIFT key is pressed, we multiply the position sensitivity by the speed up factor
             if (app->getKeyboard().isPressed(GLFW_KEY_LEFT_SHIFT))
                 current_sensitivity *= controller->speedupFactor;
-
             // We change the camera position based on the keys WASD/QE
             // S & W moves the player back and forth
-            if (app->getKeyboard().isPressed(GLFW_KEY_W))
-                position += front * (deltaTime * current_sensitivity.z);
+            if (!app->getKeyboard().isPressed(GLFW_KEY_W))
+            {
+                b2 = false;
+            }
+            else if (b2 && app->getKeyboard().isPressed(GLFW_KEY_W))
+            {
+            }
+            else
+            {
+                
+                position.z -= 0.02;
+                if(position.z-prevZ>10){
+                    b2 = true;
+                }
+            }
             if (app->getKeyboard().isPressed(GLFW_KEY_S))
                 position -= front * (deltaTime * current_sensitivity.z);
             // Q & E moves the player up and down
@@ -113,10 +126,18 @@ namespace our
             if (app->getKeyboard().isPressed(GLFW_KEY_E))
                 position -= up * (deltaTime * current_sensitivity.y);
             // A & D moves the player left or right
-            if (app->getKeyboard().isPressed(GLFW_KEY_D))
-                position += right * (deltaTime * current_sensitivity.x);
-            if (app->getKeyboard().isPressed(GLFW_KEY_A))
-                position -= right * (deltaTime * current_sensitivity.x);
+            if (!app->getKeyboard().isPressed(GLFW_KEY_D))
+            {
+                b1 = false;}
+            else if (b1 && app->getKeyboard().isPressed(GLFW_KEY_D)){
+
+            }else{
+                b1 = true;
+                position.x += 2;
+            }
+
+                if (app->getKeyboard().isPressed(GLFW_KEY_A))
+                    position -= right * (deltaTime * current_sensitivity.x);
         }
 
         // When the state exits, it should call this function to ensure the mouse is unlocked
