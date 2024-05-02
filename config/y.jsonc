@@ -265,45 +265,9 @@
           }
         ]
       },
+
       {
-        "name": "tunnel",
-        "position": [9, -0.5, -3.05],
-        "rotation": [-90, 180, 90],
-        "scale": [0.01, 0.01, 0.02],
-        "components": [
-          {
-            "type": "Mesh Renderer",
-            "mesh": "tunnel",
-            "material": "tunnel"
-          }
-        ]
-      },
-      {
-        "position": [-9, -0.5, -3.05],
-        "rotation": [-90, 0, 90],
-        "scale": [0.01, 0.01, 0.02],
-        "components": [
-          {
-            "type": "Mesh Renderer",
-            "mesh": "tunnel",
-            "material": "tunnel"
-          }
-        ]
-      },
-      {
-        "position": [9, -0.5, -3.05],
-        "rotation": [-90, 180, 90],
-        "scale": [0.01, 0.01, 0.02],
-        "components": [
-          {
-            "type": "Mesh Renderer",
-            "mesh": "tunnel",
-            "material": "tunnel"
-          }
-        ]
-      },
-      {
-        "name":"tunnel3",
+        "name": "tunnel3",
         "position": [-9, -0.5, 0.95],
         "rotation": [-90, 0, 90],
         "scale": [0.01, 0.01, 0.02],
@@ -404,6 +368,7 @@
         ],
         "children": [
           {
+            "name": "frog",
             "position": [0, -2.5, -4],
             "rotation": [-90, 0, 0],
             "scale": [0.04, 0.04, 0.04],

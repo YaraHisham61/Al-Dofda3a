@@ -63,6 +63,20 @@ namespace our
                 app->getMouse().unlockMouse(app->getWindow());
                 mouse_locked = false;
             }
+            Entity *frog = nullptr;
+            for (auto entity : world->getEntities())
+            {
+                std::string name = entity->name;
+                if (name == "frog")
+                {
+                    frog = entity;
+                    break;
+                }
+            }
+            if (!frog)
+            {
+                return; // Not sure ????
+            }
 
             // We get a reference to the entity's position and rotation
             glm::vec3 &position = entity->localTransform.position;
@@ -72,9 +86,9 @@ namespace our
             // and use it to update the camera rotation
             if (app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1))
             {
-                // glm::vec2 delta = app->getMouse().getMouseDelta();
-                // rotation.x -= delta.y * controller->rotationSensitivity; // The y-axis controls the pitch
-                // rotation.y -= delta.x * controller->rotationSensitivity; // The x-axis controls the yaw
+                glm::vec2 delta = app->getMouse().getMouseDelta();
+                rotation.x -= delta.y * controller->rotationSensitivity; // The y-axis controls the pitch
+                rotation.y -= delta.x * controller->rotationSensitivity; // The x-axis controls the yaw
             }
 
             // We prevent the pitch from exceeding a certain angle from the XZ plane to prevent gimbal locks
@@ -103,43 +117,34 @@ namespace our
                 current_sensitivity *= controller->speedupFactor;
             // We change the camera position based on the keys WASD/QE
             // S & W moves the player back and forth
-            if (!app->getKeyboard().isPressed(GLFW_KEY_W))
+            // We change the camera position based on the keys WASD/QE
+            // S & W moves the player back and forth
+            if (app->getKeyboard().isPressed(GLFW_KEY_W))
             {
-                b2 = false;
+                position += front * (deltaTime * current_sensitivity.z);
+                // positionCamera += front * (deltaTime * current_sensitivity.z);
             }
-            else if (b2 && app->getKeyboard().isPressed(GLFW_KEY_W))
-            {
-            }
-            else
-            {
-                
-                position.z -= 0.02;
-                if(position.z-prevZ>10){
-                    b2 = true;
-                }
-            }
+
             if (app->getKeyboard().isPressed(GLFW_KEY_S))
+            {
                 position -= front * (deltaTime * current_sensitivity.z);
+                // positionCamera -= front * (deltaTime * current_sensitivity.z);
+            }
             // Q & E moves the player up and down
             if (app->getKeyboard().isPressed(GLFW_KEY_Q))
                 position += up * (deltaTime * current_sensitivity.y);
             if (app->getKeyboard().isPressed(GLFW_KEY_E))
                 position -= up * (deltaTime * current_sensitivity.y);
             // A & D moves the player left or right
-            if (!app->getKeyboard().isPressed(GLFW_KEY_D))
+            if (app->getKeyboard().isPressed(GLFW_KEY_D))
             {
-                b1 = false;}
-            else if (b1 && app->getKeyboard().isPressed(GLFW_KEY_D)){
-
-            }else{
-                b1 = true;
-                position.x += 2;
+                position += right * (deltaTime * current_sensitivity.x);
+                // frog->localTransform.position += right * (deltaTime * current_sensitivity.x);
+                // frog->localTransform.rotation.y = glm::pi<float>() * -0.5f;
             }
-
-                if (app->getKeyboard().isPressed(GLFW_KEY_A))
-                    position -= right * (deltaTime * current_sensitivity.x);
+            if (app->getKeyboard().isPressed(GLFW_KEY_A))
+                position -= right * (deltaTime * current_sensitivity.x);
         }
-
         // When the state exits, it should call this function to ensure the mouse is unlocked
         void exit()
         {

@@ -8,6 +8,7 @@
 #include <systems/frog-camera-controller.hpp>
 #include <systems/movement.hpp>
 #include <systems/car_movement.hpp>
+#include <systems/collision.hpp>
 #include <asset-loader.hpp>
 
 // This state shows how to use the ECS framework and deserialization.
@@ -20,6 +21,7 @@ class Playstate : public our::State
     our::FrogCameraControllerSystem frogController;
     our::MovementSystem movementSystem;
     our::CarMovementSystem carMovementSystem;
+    our::CollisionSystem collisionSystem;
 
     void onInitialize() override
     {
@@ -38,6 +40,7 @@ class Playstate : public our::State
         // We initialize the camera controller system since it needs a pointer to the app
         cameraController.enter(getApp());
         frogController.enter(getApp());
+        collisionSystem.getFrogEntity(&world);
         // Then we initialize the renderer
         auto size = getApp()->getFrameBufferSize();
         renderer.initialize(size, config["renderer"]);
@@ -50,6 +53,7 @@ class Playstate : public our::State
         carMovementSystem.update(&world, (float)deltaTime);
         cameraController.update(&world, (float)deltaTime);
         frogController.update(&world, (float)deltaTime);
+        collisionSystem.update(&world, (float)deltaTime);
         // And finally we use the renderer system to draw the scene
         renderer.render(&world);
 

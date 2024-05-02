@@ -89,6 +89,7 @@ set(COMMON_SOURCES
         source/common/systems/movement.hpp
         source/common/systems/car_movement.hpp
         source/common/systems/frog-camera-controller.hpp
+        source/common/systems/collision.hpp
 )
 
 # Define the directories in which to search for the included headers
