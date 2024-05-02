@@ -70,9 +70,9 @@ namespace our
             // and use it to update the camera rotation
             if (app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1))
             {
-                glm::vec2 delta = app->getMouse().getMouseDelta();
-                rotation.x -= delta.y * controller->rotationSensitivity; // The y-axis controls the pitch
-                rotation.y -= delta.x * controller->rotationSensitivity; // The x-axis controls the yaw
+                // glm::vec2 delta = app->getMouse().getMouseDelta();
+                // rotation.x -= delta.y * controller->rotationSensitivity; // The y-axis controls the pitch
+                // rotation.y -= delta.x * controller->rotationSensitivity; // The x-axis controls the yaw
             }
 
             // We prevent the pitch from exceeding a certain angle from the XZ plane to prevent gimbal locks
@@ -92,7 +92,7 @@ namespace our
             // We get the camera model matrix (relative to its parent) to compute the front, up and right directions
             glm::mat4 matrix = entity->localTransform.toMat4();
 
-            glm::vec3 front = glm::vec3(matrix * glm::vec4(0, 0, -1, 0)),
+            glm::vec3 front = glm::vec3(matrix * glm::vec4(0, 0, -5, 0)),
                       up = glm::vec3(matrix * glm::vec4(0, 1, 0, 0)),
                       right = glm::vec3(matrix * glm::vec4(1, 0, 0, 0));
 
