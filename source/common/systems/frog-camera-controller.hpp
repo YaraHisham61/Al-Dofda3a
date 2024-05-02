@@ -10,7 +10,7 @@
 #include <glm/gtc/constants.hpp>
 #include <glm/trigonometric.hpp>
 #include <glm/gtx/fast_trigonometry.hpp>
-
+#include <iostream>
 namespace our
 {
 
@@ -40,11 +40,11 @@ namespace our
             {
                 camera = entity->getComponent<CameraComponent>();
                 controller = entity->getComponent<FrogCameraControllerComponent>();
-                if (camera && controller)
+                if (controller)
                     break;
             }
             // If there is no entity with both a CameraComponent and a FreeCameraControllerComponent, we can do nothing so we return
-            if (!(camera && controller))
+            if (!(controller))
                 return;
             // Get the entity that we found via getOwner of camera (we could use controller->getOwner())
             Entity *entity = camera->getOwner();
@@ -56,6 +56,24 @@ namespace our
             // We get a reference to the entity's position and rotation
             glm::vec3 &positionFrog = entity->parent->localTransform.position;
             glm::vec3 &rotationFrog = entity->parent->localTransform.rotation;
+
+            // If the left mouse button is pressed, we get the change in the mouse location
+            // and use it to update the camera rotation
+            if (app->getMouse().isPressed(GLFW_MOUSE_BUTTON_1))
+            {
+                glm::vec2 delta = app->getMouse().getMouseDelta();
+                rotationCamera.x -= delta.y * controller->rotationSensitivity; // The y-axis controls the pitch
+                rotationCamera.y -= delta.x * controller->rotationSensitivity; // The x-axis controls the yaw
+            }
+
+            // We prevent the pitch from exceeding a certain angle from the XZ plane to prevent gimbal locks
+            if (rotationCamera.x < -glm::half_pi<float>() * 0.99f)
+                rotationCamera.x = -glm::half_pi<float>() * 0.99f;
+            if (rotationCamera.x > glm::half_pi<float>() * 0.99f)
+                rotationCamera.x = glm::half_pi<float>() * 0.99f;
+            // This is not necessary, but whenever the rotation goes outside the 0 to 2*PI range, we wrap it back inside.
+            // This could prevent floating point error if the player rotates in single direction for an extremely long time.
+            rotationCamera.y = glm::wrapAngle(rotationCamera.y);
 
             // We get the camera model matrix (relative to its parent) to compute the front, up and right directions
             glm::mat4 matrix = entity->localTransform.toMat4();
@@ -72,9 +90,16 @@ namespace our
             // We change the camera position based on the keys WASD/QE
             // S & W moves the player back and forth
             if (app->getKeyboard().isPressed(GLFW_KEY_W))
+            {
                 positionFrog += front * (deltaTime * current_sensitivity.z);
+                // positionCamera += front * (deltaTime * current_sensitivity.z);
+            }
+
             if (app->getKeyboard().isPressed(GLFW_KEY_S))
+            {
                 positionFrog -= front * (deltaTime * current_sensitivity.z);
+                // positionCamera -= front * (deltaTime * current_sensitivity.z);
+            }
             // Q & E moves the player up and down
             if (app->getKeyboard().isPressed(GLFW_KEY_Q))
                 positionFrog += up * (deltaTime * current_sensitivity.y);
