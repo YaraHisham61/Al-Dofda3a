@@ -53,7 +53,7 @@ namespace our
                 {
                     glm::vec2 carPositon = glm::vec2(car->getOwner()->localTransform.position.x, car->getOwner()->localTransform.position.z);
                     // Change the position and rotation based on the linear & angular velocity and delta time.
-                    std::cout << "We are @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
+                    // std::cout << "We are @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
                     if (carPositon.y - 0.5 < frogPosition.y && frogPosition.y < carPositon.y + 1)
                     {
                         if (carPositon.x - 2 < frogPosition.x && frogPosition.x < carPositon.x + 1.3)

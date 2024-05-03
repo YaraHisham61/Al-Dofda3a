@@ -28,10 +28,15 @@ namespace our
                 // If the movement component exists
                 if (movement)
                 {
+                    
                     entity->localTransform.position += deltaTime * movement->linearVelocity;
-                    if (entity->localTransform.position.x > 12)
+                    if (entity->localTransform.position.x > 12&&movement->linearVelocity.x>0)
                     {
                         entity->localTransform.position.x = -12;
+                    }
+                    else if(entity->localTransform.position.x < -12 && movement->linearVelocity.x < 0)
+                    {
+                        entity->localTransform.position.x = 12;
                     }
                 }
             }
