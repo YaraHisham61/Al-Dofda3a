@@ -5,9 +5,9 @@
 #include <ecs/world.hpp>
 #include <systems/forward-renderer.hpp>
 #include <systems/free-camera-controller.hpp>
-#include <systems/frog-camera-controller.hpp>
 #include <systems/movement.hpp>
 #include <systems/car_movement.hpp>
+#include <systems/bus_movement.hpp>
 #include <systems/collision.hpp>
 #include <asset-loader.hpp>
 
@@ -18,9 +18,9 @@ class Playstate : public our::State
     our::World world;
     our::ForwardRenderer renderer;
     our::FreeCameraControllerSystem cameraController;
-    our::FrogCameraControllerSystem frogController;
     our::MovementSystem movementSystem;
     our::CarMovementSystem carMovementSystem;
+    our::BusMovementSystem busMovementSystem;
     our::CollisionSystem collisionSystem;
 
     void onInitialize() override
@@ -39,7 +39,6 @@ class Playstate : public our::State
         }
         // We initialize the camera controller system since it needs a pointer to the app
         cameraController.enter(getApp());
-        frogController.enter(getApp());
         collisionSystem.getFrogEntity(&world);
         // Then we initialize the renderer
         auto size = getApp()->getFrameBufferSize();
@@ -50,9 +49,9 @@ class Playstate : public our::State
     {
         // Here, we just run a bunch of systems to control the world logic
         movementSystem.update(&world, (float)deltaTime);
+        busMovementSystem.update(&world, (float)deltaTime);
         carMovementSystem.update(&world, (float)deltaTime);
         cameraController.update(&world, (float)deltaTime);
-        frogController.update(&world, (float)deltaTime);
         collisionSystem.update(&world, (float)deltaTime, getApp());
         // And finally we use the renderer system to draw the scene
         renderer.render(&world);
@@ -76,7 +75,6 @@ class Playstate : public our::State
         renderer.destroy();
         // On exit, we call exit for the camera controller system to make sure that the mouse is unlocked
         cameraController.exit();
-        frogController.exit();
         // Clear the world
         world.clear();
         // and we delete all the loaded assets to free memory on the RAM and the VRAM

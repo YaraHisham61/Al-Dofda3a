@@ -2,6 +2,7 @@
 
 #include "../ecs/world.hpp"
 #include "../components/car_movement.hpp"
+#include "../components/bus_movement.hpp"
 #include "../application.hpp"
 
 #include <glm/glm.hpp>
@@ -61,7 +62,7 @@ namespace our
                     {
                         if (carPositon.x - 1.6 < frogPosition.x && frogPosition.x < carPositon.x + 1.3)
                         {
-                            std::cout << "Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
+                            std::cout << "Car Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
                             if (!heartsLeft)
                             {
                                 std::cout << "NO HEARTS LEFT!" << std::endl;
@@ -73,6 +74,35 @@ namespace our
                                 // Add Some Warning ??
                                 frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
                                 frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    BusMovementComponent *bus = entity->getComponent<BusMovementComponent>();
+                    if (bus)
+                    {
+                        glm::vec2 busPositon = glm::vec2(bus->getOwner()->localTransform.position.x, bus->getOwner()->localTransform.position.z);
+                        // std::cout << "We are @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
+
+                        if (busPositon.y - 0.9 < frogPosition.y && frogPosition.y < busPositon.y + 0.55)
+                        {
+                            if (busPositon.x - 3.5 < frogPosition.x && frogPosition.x < busPositon.x + 3.1)
+                            {
+                                std::cout << "Bus Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << busPositon.x << " Cy = " << busPositon.y << std::endl;
+                                if (!heartsLeft)
+                                {
+                                    std::cout << "NO HEARTS LEFT!" << std::endl;
+                                    app->changeState("menu");
+                                }
+                                else
+                                {
+                                    heartsLeft--;
+                                    // Add Some Warning ??
+                                    frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
+                                    frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
+                                }
                             }
                         }
                     }
