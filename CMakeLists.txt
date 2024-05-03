@@ -79,16 +79,17 @@ set(COMMON_SOURCES
         source/common/components/movement.cpp
         source/common/components/car_movement.hpp
         source/common/components/car_movement.cpp
+        source/common/components/bus_movement.hpp
+        source/common/components/bus_movement.cpp
         source/common/components/component-deserializer.hpp
-        source/common/components/frog-camera-controller.hpp
-        source/common/components/frog-camera-controller.cpp
+
 
         source/common/systems/forward-renderer.hpp
         source/common/systems/forward-renderer.cpp
         source/common/systems/free-camera-controller.hpp
         source/common/systems/movement.hpp
         source/common/systems/car_movement.hpp
-        source/common/systems/frog-camera-controller.hpp
+        source/common/systems/bus_movement.hpp
         source/common/systems/collision.hpp
 )
 

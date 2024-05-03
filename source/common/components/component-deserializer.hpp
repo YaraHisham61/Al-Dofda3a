@@ -4,9 +4,9 @@
 #include "camera.hpp"
 #include "mesh-renderer.hpp"
 #include "free-camera-controller.hpp"
-#include "frog-camera-controller.hpp"
 #include "movement.hpp"
 #include "car_movement.hpp"
+#include "bus_movement.hpp"
 
 namespace our
 {
@@ -35,14 +35,16 @@ namespace our
         {
             component = entity->addComponent<CarMovementComponent>();
         }
+        else if (type == BusMovementComponent::getID())
+        {
+            component = entity->addComponent<BusMovementComponent>();
+        }
+
         else if (type == MeshRendererComponent::getID())
         {
             component = entity->addComponent<MeshRendererComponent>();
         }
-        else if (type == FrogCameraControllerComponent::getID())
-        {
-            component = entity->addComponent<FrogCameraControllerComponent>();
-        }
+        
         if (component)
             component->deserialize(data);
     }
