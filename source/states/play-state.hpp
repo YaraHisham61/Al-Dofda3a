@@ -53,7 +53,7 @@ class Playstate : public our::State
         carMovementSystem.update(&world, (float)deltaTime);
         cameraController.update(&world, (float)deltaTime);
         frogController.update(&world, (float)deltaTime);
-        collisionSystem.update(&world, (float)deltaTime);
+        collisionSystem.update(&world, (float)deltaTime, getApp());
         // And finally we use the renderer system to draw the scene
         renderer.render(&world);
 
