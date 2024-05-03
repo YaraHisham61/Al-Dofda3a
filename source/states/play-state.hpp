@@ -8,6 +8,7 @@
 #include <systems/movement.hpp>
 #include <systems/car_movement.hpp>
 #include <systems/bus_movement.hpp>
+#include <systems/wood_movement.hpp>
 #include <systems/collision.hpp>
 #include <asset-loader.hpp>
 
@@ -21,6 +22,7 @@ class Playstate : public our::State
     our::MovementSystem movementSystem;
     our::CarMovementSystem carMovementSystem;
     our::BusMovementSystem busMovementSystem;
+    our::WoodMovementSystem woodMovementSystem;
     our::CollisionSystem collisionSystem;
 
     void onInitialize() override
@@ -51,6 +53,7 @@ class Playstate : public our::State
         movementSystem.update(&world, (float)deltaTime);
         busMovementSystem.update(&world, (float)deltaTime);
         carMovementSystem.update(&world, (float)deltaTime);
+        woodMovementSystem.update(&world, (float)deltaTime);
         cameraController.update(&world, (float)deltaTime);
         collisionSystem.update(&world, (float)deltaTime, getApp());
         // And finally we use the renderer system to draw the scene

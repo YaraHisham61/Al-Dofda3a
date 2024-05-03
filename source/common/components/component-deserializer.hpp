@@ -7,6 +7,7 @@
 #include "movement.hpp"
 #include "car_movement.hpp"
 #include "bus_movement.hpp"
+#include "wood_movement.hpp"
 
 namespace our
 {
@@ -38,6 +39,10 @@ namespace our
         else if (type == BusMovementComponent::getID())
         {
             component = entity->addComponent<BusMovementComponent>();
+        }
+        else if (type == WoodMovementComponent::getID())
+        {
+            component = entity->addComponent<WoodMovementComponent>();
         }
 
         else if (type == MeshRendererComponent::getID())

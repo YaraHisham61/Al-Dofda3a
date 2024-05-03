@@ -81,6 +81,8 @@ set(COMMON_SOURCES
         source/common/components/car_movement.cpp
         source/common/components/bus_movement.hpp
         source/common/components/bus_movement.cpp
+        source/common/components/wood_movement.hpp
+        source/common/components/wood_movement.cpp
         source/common/components/component-deserializer.hpp
 
 
@@ -90,6 +92,7 @@ set(COMMON_SOURCES
         source/common/systems/movement.hpp
         source/common/systems/car_movement.hpp
         source/common/systems/bus_movement.hpp
+        source/common/systems/wood_movement.hpp
         source/common/systems/collision.hpp
 )
 
