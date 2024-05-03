@@ -65,41 +65,6 @@
         }
       },
       "materials": {
-        "metal": {
-          "type": "tinted",
-          "shader": "tinted",
-          "pipelineState": {
-            "faceCulling": {
-              "enabled": false
-            },
-            "depthTesting": {
-              "enabled": true
-            }
-          },
-          "tint": [0.45, 0.4, 0.5, 1]
-        },
-        "glass": {
-          "type": "textured",
-          "shader": "textured",
-          "pipelineState": {
-            "faceCulling": {
-              "enabled": false
-            },
-            "depthTesting": {
-              "enabled": true
-            },
-            "blending": {
-              "enabled": true,
-              "sourceFactor": "GL_SRC_ALPHA",
-              "destinationFactor": "GL_ONE_MINUS_SRC_ALPHA"
-            },
-            "depthMask": false
-          },
-          "transparent": true,
-          "tint": [1, 1, 1, 1],
-          "texture": "glass",
-          "sampler": "pixelated"
-        },
         "grass": {
           "type": "textured",
           "shader": "textured",
@@ -260,24 +225,7 @@
       ///////////////////// Car /////////////////////////
       {
         "position": [0, 0, -2],
-        "rotation": [270, 0, 0],
-        "scale": [0.005, 0.005, 0.004],
-        "components": [
-          {
-            "type": "Mesh Renderer",
-            "mesh": "bus",
-            "material": "bus"
-          },
-          {
-            "type": "BusMovement",
-            "linearVelocity": [2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
-          }
-        ]
-      },
-      {
-        "position": [0, 0, -4],
-        "rotation": [0, 270, 0],
+        "rotation": [0, 90, 0],
         "scale": [0.6, 0.7, 0.8],
         "components": [
           {
@@ -287,11 +235,30 @@
           },
           {
             "type": "CarMovement",
-            "linearVelocity": [-2, 0, 0]
+            "linearVelocity": [5, 0, 0]
             // "angularVelocity": [0, 45, 0]
           }
         ]
       },
+      {
+        "name":"bus",
+        "position": [0, 0, -4],
+        "rotation": [270, 180, 0],
+        "scale": [0.005, 0.005, 0.004],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "bus",
+            "material": "bus"
+          },
+          {
+            "type": "CarMovement",
+            "linearVelocity": [-3, 0, 0]
+            // "angularVelocity": [0, 45, 0]
+          }
+        ]
+      },
+     
       {
         "position": [0, 0, -6],
         "rotation": [0, 90, 0],
@@ -305,24 +272,22 @@
           {
             "type": "CarMovement",
             "linearVelocity": [6, 0, 0]
-            // "angularVelocity": [0, 45, 0]
           }
         ]
       },
       {
-        "position": [0, 0.0, -8],
+        "position": [0, 0, -8],
         "rotation": [0, 270, 0],
         "scale": [0.6, 0.7, 0.8],
         "components": [
           {
             "type": "Mesh Renderer",
-            "mesh": "car1",
-            "material": "car1"
+            "mesh": "car2",
+            "material": "car2"
           },
           {
             "type": "CarMovement",
-            "linearVelocity": [-2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
+            "linearVelocity": [-3, 0, 0]
           }
         ]
       },
@@ -338,25 +303,24 @@
           },
           {
             "type": "CarMovement",
-            "linearVelocity": [2, 0, 0]
+            "linearVelocity": [10, 0, 0]
             // "angularVelocity": [0, 45, 0]
           }
         ]
       },
       {
-        "position": [2, 0, -18],
+        "position": [0, 0, -18],
         "rotation": [0, 270, 0],
         "scale": [0.6, 0.7, 0.8],
         "components": [
           {
             "type": "Mesh Renderer",
-            "mesh": "car1",
-            "material": "car1"
+            "mesh": "car2",
+            "material": "car2"
           },
           {
             "type": "CarMovement",
-            "linearVelocity": [-2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
+            "linearVelocity": [-4, 0, 0]
           }
         ]
       },
@@ -372,25 +336,23 @@
           },
           {
             "type": "CarMovement",
-            "linearVelocity": [2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
+            "linearVelocity": [5, 0, 0]
           }
         ]
       },
       {
-        "position": [4, 0, -22],
-        "rotation": [0, 270, 0],
-        "scale": [0.6, 0.7, 0.8],
+        "position": [0, 0, -22],
+        "rotation": [270, 180, 0],
+        "scale": [0.005, 0.005, 0.004],
         "components": [
           {
             "type": "Mesh Renderer",
-            "mesh": "car1",
-            "material": "car1"
+            "mesh": "bus",
+            "material": "bus"
           },
           {
             "type": "CarMovement",
-            "linearVelocity": [-2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
+            "linearVelocity": [-3, 0, 0]
           }
         ]
       },
