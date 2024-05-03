@@ -16,7 +16,7 @@ namespace our
 {
     static Entity *frogCamera;
     static Entity *frog;
-    static int heartsLeft = 3;
+    static int heartsLeft = 2;
 
     // The Collision system is responsible for detecting collision of frog with every car which contains a CarMovementComponent.
     class CollisionSystem
@@ -63,10 +63,11 @@ namespace our
                         if (carPositon.x - 1.6 < frogPosition.x && frogPosition.x < carPositon.x + 1.3)
                         {
                             std::cout << "Car Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
-                            if (!heartsLeft)
+                            if (heartsLeft <= 0)
                             {
                                 std::cout << "NO HEARTS LEFT!" << std::endl;
-                                app->changeState("menu");
+                                heartsLeft = 2;
+                                app->changeState("game-over");
                             }
                             else
                             {
@@ -91,10 +92,11 @@ namespace our
                             if (busPositon.x - 3.5 < frogPosition.x && frogPosition.x < busPositon.x + 3.1)
                             {
                                 std::cout << "Bus Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << busPositon.x << " Cy = " << busPositon.y << std::endl;
-                                if (!heartsLeft)
+                                if (heartsLeft <= 0)
                                 {
                                     std::cout << "NO HEARTS LEFT!" << std::endl;
-                                    app->changeState("menu");
+                                    heartsLeft = 2;
+                                    app->changeState("game-over");
                                 }
                                 else
                                 {
