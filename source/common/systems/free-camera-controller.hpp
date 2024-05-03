@@ -144,6 +144,11 @@ namespace our
             }
             if (app->getKeyboard().isPressed(GLFW_KEY_A))
                 position -= right * (deltaTime * current_sensitivity.x);
+
+            if (position.z <= -25.5 && position.x >= -0.856 && position.x <= 1.8)
+            {
+                app->changeState("win");
+            }
         }
         // When the state exits, it should call this function to ensure the mouse is unlocked
         void exit()
