@@ -39,6 +39,7 @@
         "chess": "assets/textures/chess2.jpg",
         "car2": "assets/textures/car2.jpg",
         "bus": "assets/textures/bus.jpg",
+        "stick":"assets/textures/stick.png",
         "heart": "assets/textures/heart.png"
       },
       "meshes": {
@@ -51,7 +52,8 @@
         "car1": "assets/models/car1.obj",
         "car2": "assets/models/car2.obj",
         "tunnel": "assets/models/tunnel.obj",
-        "bus": "assets/models/bus.obj"
+        "bus": "assets/models/bus.obj",
+        "stick":"assets/models/stick.obj"
       },
       "samplers": {
         "default": {},
@@ -219,6 +221,21 @@
           "texture": "chess",
           "sampler": "repeated"
         },
+        "stick": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [0.5, 0.5, 0.5, 1],
+          "texture": "stick",
+          "sampler": "default"
+        },
         "heart": {
           "type": "textured",
           "shader": "textured",
@@ -269,7 +286,7 @@
             "material": "bus"
           },
           {
-            "type": "CarMovement",
+            "type": "BusMovement",
             "linearVelocity": [-3, 0, 0]
             // "angularVelocity": [0, 45, 0]
           }
@@ -368,7 +385,7 @@
             "material": "bus"
           },
           {
-            "type": "CarMovement",
+            "type": "BusMovement",
             "linearVelocity": [-3, 0, 0]
           }
         ]
@@ -691,6 +708,97 @@
             "type": "Mesh Renderer",
             "mesh": "plane",
             "material": "grass"
+          }
+        ]
+      },
+      ////////////// stick /////////////
+      {
+        "name": "stick1",
+        "position": [0, 0.1, -12],
+        "rotation": [90, 90, 0],
+        "scale": [0.09, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+            // "angularVelocity": [0, 45, 0]
+          }
+        ]
+      },
+      {
+        "name": "stick1",
+        "position": [10, 0.1, -12],
+        "rotation": [90, 90, 0],
+        "scale": [0.09, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+            // "angularVelocity": [0, 45, 0]
+          }
+        ]
+      },
+      {
+        "name": "stick1",
+        "position": [5, 0.1, -12],
+        "rotation": [90, 90, 0],
+        "scale": [0.09, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+            // "angularVelocity": [0, 45, 0]
+          }
+        ]
+      },
+      {
+        "name": "stick1",
+        "position": [-5, 0.1, -12],
+        "rotation": [90, 90, 0],
+        "scale": [0.09, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+            // "angularVelocity": [0, 45, 0]
+          }
+        ]
+      },
+      {
+        "name": "stick1",
+        "position": [-10, 0.1, -12],
+        "rotation": [90, 90, 0],
+        "scale": [0.09, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+            // "angularVelocity": [0, 45, 0]
           }
         ]
       },

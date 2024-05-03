@@ -3,6 +3,7 @@
 #include "../ecs/world.hpp"
 #include "../components/car_movement.hpp"
 #include "../components/bus_movement.hpp"
+#include "../components/wood_movement.hpp"
 #include "../application.hpp"
 
 #include <glm/glm.hpp>
@@ -82,6 +83,7 @@ namespace our
                 else
                 {
                     BusMovementComponent *bus = entity->getComponent<BusMovementComponent>();
+                 WoodMovementComponent *wood = entity->getComponent<WoodMovementComponent>();
                     if (bus)
                     {
                         glm::vec2 busPositon = glm::vec2(bus->getOwner()->localTransform.position.x, bus->getOwner()->localTransform.position.z);
@@ -105,6 +107,30 @@ namespace our
                                     frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
                                     frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
                                 }
+                            }
+                        }
+                    }
+                    else if(wood) {
+                        glm::vec2 WoodPositon = glm::vec2(wood->getOwner()->localTransform.position.x, wood->getOwner()->localTransform.position.z);
+                        if (WoodPositon.y - 0.9 < frogPosition.y && frogPosition.y < WoodPositon.y + 0.55)
+                        {
+                            if (WoodPositon.x - 1 < frogPosition.x && frogPosition.x < WoodPositon.x + 1)
+                            {
+                                std::cout << "Wood Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << WoodPositon.x << " Cy = " << WoodPositon.y << std::endl;
+                                frog->localTransform.position.y = -2;
+                                frogCamera->localTransform.position.x = WoodPositon.x;
+                                // if (!heartsLeft)
+                                // {
+                                //     std::cout << "NO HEARTS LEFT!" << std::endl;
+                                //     app->changeState("menu");
+                                // }
+                                // else
+                                // {
+                                //     heartsLeft--;
+                                //     // Add Some Warning ??
+                                //     frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
+                                //     frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
+                                // }
                             }
                         }
                     }
