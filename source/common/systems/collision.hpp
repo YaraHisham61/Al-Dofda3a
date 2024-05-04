@@ -23,6 +23,9 @@ namespace our
     static Entity *heart3;
     static Entity *wallL;
     static Entity *wallR;
+    static Entity *frontWall1;
+    static Entity *frontWall2;
+    static Entity *frontWallExtend2;
     // The Collision system is responsible for detecting collision of frog with every car which contains a CarMovementComponent.
     class CollisionSystem
     {
@@ -58,6 +61,16 @@ namespace our
                 else if (entity->name.find("tunnelR") == 0)
                 {
                     wallR = entity;
+                }else if(entity->name=="frontWall1"){
+                    frontWall1 = entity;
+                }
+                else if (entity->name == "frontWall2")
+                {
+                    frontWall2 = entity;
+                }
+                else if (entity->name == "frontWallExtend2")
+                {
+                    frontWallExtend2 = entity;
                 }
             }
             if (frogCamera == nullptr)
@@ -73,7 +86,7 @@ namespace our
             frog->localTransform.position.y = -2.5;
             glm::vec2 wallRPositon = glm::vec2(wallR->localTransform.position.x, wallR->localTransform.position.z);
             glm::vec2 wallLPositon = glm::vec2(wallL->localTransform.position.x, wallL->localTransform.position.z);
-
+            //Walls Check
             if (frogPosition.x < wallLPositon.x + 0.58)
             {
                 std::cout << "Left Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallLPositon.x << " Cy = " << wallLPositon.y << std::endl;
@@ -82,8 +95,24 @@ namespace our
 
             if (frogPosition.x > wallRPositon.x - 0.58)
             {
-                std::cout << "Right Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallRPositon.x << " Cy = " << wallRPositon.y << std::endl;
+                // std::cout << "Right Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallRPositon.x << " Cy = " << wallRPositon.y << std::endl;
                 frogCamera->localTransform.position.x = wallRPositon.x - 0.58;
+            }
+            if (frogPosition.y<frontWall2->localTransform.position.z + 0.5&&frogPosition.x> frontWall2->localTransform.position.x - 3 && frogPosition.x < frontWall2->localTransform.position.x + 4.9)
+            {
+
+                frogCamera->localTransform.position.z = frontWall2->localTransform.position.z + 4.5;
+
+                std::cout << "Front Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << frontWall2->localTransform.position.x << " Cy = " << frontWall2->localTransform.position.z << std::endl;
+                return;
+            }
+            if (frogPosition.y < frontWall1->localTransform.position.z + 0.5 && frogPosition.x > frontWall1->localTransform.position.x - 5 && frogPosition.x < frontWall1->localTransform.position.x + 3)
+            {
+
+                frogCamera->localTransform.position.z = frontWall2->localTransform.position.z + 4.5;
+
+                std::cout << "Front Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << frontWall2->localTransform.position.x << " Cy = " << frontWall2->localTransform.position.z << std::endl;
+                return;
             }
             // For each entity in the world
             for (auto entity : world->getEntities())
@@ -182,7 +211,7 @@ namespace our
                         {
                             if (WoodPositon.x + 1 < frogPosition.x && frogPosition.x < WoodPositon.x + 3)
                             {
-                                // std::cout << "Wood Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << WoodPositon.x << " Cy = " << WoodPositon.y << std::endl;
+                                std::cout << "Wood Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << WoodPositon.x << " Cy = " << WoodPositon.y << std::endl;
                                 frog->localTransform.position.y = -2.1;
                                 frogCamera->localTransform.position += deltaTime * wood->linearVelocity;
                             }
