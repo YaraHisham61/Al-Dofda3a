@@ -40,7 +40,8 @@
         "car2": "assets/textures/car2.jpg",
         "bus": "assets/textures/bus.jpg",
         "stick":"assets/textures/stick.png",
-        "heart": "assets/textures/heart.png"
+        "heart": "assets/textures/heart.png",
+        "skull":"assets/models/moon.jpg"
       },
       "meshes": {
         "cube": "assets/models/cube.obj",
@@ -54,7 +55,8 @@
         "tunnel": "assets/models/tunnel.obj",
         "bus": "assets/models/bus.obj",
         "stick":"assets/models/stick.obj",
-        "heart":"assets/models/heart.obj"
+        "heart":"assets/models/heart.obj",
+        "skull":"assets/models/skull.obj"
       },
       "samplers": {
         "default": {},
@@ -82,6 +84,21 @@
           },
           "tint": [1, 1, 1, 1],
           "texture": "grass",
+          "sampler": "default"
+        },
+        "skull": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "skull",
           "sampler": "default"
         },
         "car1": {
@@ -256,7 +273,6 @@
     },
 
     "world": [
-
       ///////////////////// Car /////////////////////////
       {
         "position": [0, 0, -2],
@@ -343,6 +359,7 @@
           }
         ]
       },
+
       {
         "position": [0, 0, -18],
         "rotation": [0, 270, 0],
@@ -406,6 +423,7 @@
           }
         ]
       },
+      
       {
         "name": "tunnelL2",
         "position": [-9, -0.5, -2.99],
@@ -539,6 +557,19 @@
         ],
         "children": [
           {
+            "name": "skull",
+            "position": [0, -0.5, 0.95],
+            "rotation": [90, -20, 0],
+            "scale": [0.0, 0.0, 0.0],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "skull",
+                "material": "skull"
+              }
+            ]
+          },
+          {
             "name": "frog",
             "position": [0, -2.5, -4],
             "rotation": [-90, 0, 0],
@@ -554,8 +585,8 @@
           {
             "name": "heart1",
             "position": [-7, 2.4, -4],
-            "rotation": [0,10, 0],
-            "scale": [0.5,0.5,0.5],
+            "rotation": [0, 10, 0],
+            "scale": [0.5, 0.5, 0.5],
             "components": [
               {
                 "type": "Mesh Renderer",

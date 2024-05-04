@@ -21,6 +21,8 @@ namespace our
     static Entity *heart1;
     static Entity *heart2;
     static Entity *heart3;
+    static Entity *wallL;
+    static Entity *wallR;
     // The Collision system is responsible for detecting collision of frog with every car which contains a CarMovementComponent.
     class CollisionSystem
     {
@@ -36,13 +38,20 @@ namespace our
                     // std::cout << "Found Frog @ " << entity->parent->localTransform.position.x << std::endl;
                     frog = entity;
                     frogCamera = entity->parent;
-                    
-                }else if (entity->name=="heart1"){
+                }
+                else if (entity->name == "heart1")
+                {
                     heart1 = entity;
-                }else if (entity->name=="heart2"){
-                    heart2 = entity;}
-                else if (entity->name=="heart3"){
-                    heart3 = entity;}
+                }
+                else if (entity->name == "heart2")
+                {
+                    heart2 = entity;
+                }
+                else if (entity->name == "heart3")
+                {
+                    heart3 = entity;
+                }
+                
             }
             if (frogCamera == nullptr)
             {
@@ -61,7 +70,6 @@ namespace our
             {
                 // Get the car component if it exists
                 CarMovementComponent *car = entity->getComponent<CarMovementComponent>();
-
                 // If the car component exists
                 if (car)
                 {
@@ -101,6 +109,26 @@ namespace our
                                 frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
                             }
                         }
+                    }
+                }
+                else if (entity->name.find("tunnelR") == 0)
+                {
+                    glm::vec2 wallPositon = glm::vec2(entity->localTransform.position.x, entity->localTransform.position.z);
+
+                    if (frogPosition.x > wallPositon.x - 0.58)
+                    {
+                        std::cout << "Right Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallPositon.x << " Cy = " << wallPositon.y << std::endl;
+                        frogCamera->localTransform.position.x = wallPositon.x - 0.58;
+                    }
+                }
+                else if (entity->name.find("tunnelL") == 0)
+                {
+                    glm::vec2 wallPositon = glm::vec2(entity->localTransform.position.x, entity->localTransform.position.z);
+
+                    if ( frogPosition.x < wallPositon.x + 0.58)
+                    {
+                        std::cout << "Left Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallPositon.x << " Cy = " << wallPositon.y << std::endl;
+                        frogCamera->localTransform.position.x = wallPositon.x + 0.58;
                     }
                 }
                 else
