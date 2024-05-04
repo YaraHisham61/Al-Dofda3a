@@ -53,7 +53,8 @@
         "car2": "assets/models/car2.obj",
         "tunnel": "assets/models/tunnel.obj",
         "bus": "assets/models/bus.obj",
-        "stick":"assets/models/stick.obj"
+        "stick":"assets/models/stick.obj",
+        "heart":"assets/models/heart.obj"
       },
       "samplers": {
         "default": {},
@@ -552,13 +553,39 @@
           },
           {
             "name": "heart1",
-            "position": [-5, -2.5, -4],
-            "rotation": [0, 0, 0],
+            "position": [-7, 2.4, -4],
+            "rotation": [0,10, 0],
             "scale": [0.5,0.5,0.5],
             "components": [
               {
                 "type": "Mesh Renderer",
-                "mesh": "plane",
+                "mesh": "heart",
+                "material": "heart"
+              }
+            ]
+          },
+          {
+            "name": "heart2",
+            "position": [-6, 2.4, -4],
+            "rotation": [0, 10, 0],
+            "scale": [0.5, 0.5, 0.5],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "heart",
+                "material": "heart"
+              }
+            ]
+          },
+          {
+            "name": "heart3",
+            "position": [-5, 2.4, -4],
+            "rotation": [0, 10, 0],
+            "scale": [0.5, 0.5, 0.5],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "heart",
                 "material": "heart"
               }
             ]

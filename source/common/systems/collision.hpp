@@ -18,7 +18,9 @@ namespace our
     static Entity *frogCamera;
     static Entity *frog;
     static int heartsLeft = 2;
-
+    static Entity *heart1;
+    static Entity *heart2;
+    static Entity *heart3;
     // The Collision system is responsible for detecting collision of frog with every car which contains a CarMovementComponent.
     class CollisionSystem
     {
@@ -34,8 +36,13 @@ namespace our
                     // std::cout << "Found Frog @ " << entity->parent->localTransform.position.x << std::endl;
                     frog = entity;
                     frogCamera = entity->parent;
-                    break;
-                }
+                    
+                }else if (entity->name=="heart1"){
+                    heart1 = entity;
+                }else if (entity->name=="heart2"){
+                    heart2 = entity;}
+                else if (entity->name=="heart3"){
+                    heart3 = entity;}
             }
             if (frogCamera == nullptr)
             {
@@ -66,6 +73,20 @@ namespace our
                         if (carPositon.x - 1.6 < frogPosition.x && frogPosition.x < carPositon.x + 1.3)
                         {
                             std::cout << "Car Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
+                            switch (heartsLeft)
+                            {
+                            case 2:
+                                heart3->localTransform.scale = glm::vec3(0, 0, 0);
+                                break;
+                            case 1:
+                                heart2->localTransform.scale = glm::vec3(0, 0, 0);
+                                break;
+                            case 0:
+                                heart1->localTransform.scale = glm::vec3(0, 0, 0);
+                                break;
+                            default:
+                                break;
+                            }
                             if (heartsLeft <= 0)
                             {
                                 std::cout << "NO HEARTS LEFT!" << std::endl;
@@ -96,6 +117,20 @@ namespace our
                             if (busPositon.x - 3.5 < frogPosition.x && frogPosition.x < busPositon.x + 3.1)
                             {
                                 std::cout << "Bus Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << busPositon.x << " Cy = " << busPositon.y << std::endl;
+                                switch (heartsLeft)
+                                {
+                                case 2:
+                                    heart3->localTransform.scale = glm::vec3(0, 0, 0);
+                                    break;
+                                case 1:
+                                    heart2->localTransform.scale = glm::vec3(0, 0, 0);
+                                    break;
+                                case 0:
+                                    heart1->localTransform.scale = glm::vec3(0, 0, 0);
+                                    break;
+                                default:
+                                    break;
+                                }
                                 if (heartsLeft <= 0)
                                 {
                                     std::cout << "NO HEARTS LEFT!" << std::endl;
