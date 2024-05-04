@@ -51,7 +51,14 @@ namespace our
                 {
                     heart3 = entity;
                 }
-                
+                else if (entity->name.find("tunnelL") == 0)
+                {
+                    wallL = entity;
+                }
+                else if (entity->name.find("tunnelR") == 0)
+                {
+                    wallR = entity;
+                }
             }
             if (frogCamera == nullptr)
             {
@@ -64,7 +71,20 @@ namespace our
             // initial position.z of camera is  4 so we store the camera (position.z-4) to get the abs. positiion
             glm::vec2 frogPosition = glm::vec2(frogCamera->localTransform.position.x, frogCamera->localTransform.position.z - 4);
             frog->localTransform.position.y = -2.5;
+            glm::vec2 wallRPositon = glm::vec2(wallR->localTransform.position.x, wallR->localTransform.position.z);
+            glm::vec2 wallLPositon = glm::vec2(wallL->localTransform.position.x, wallL->localTransform.position.z);
 
+            if (frogPosition.x < wallLPositon.x + 0.58)
+            {
+                std::cout << "Left Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallLPositon.x << " Cy = " << wallLPositon.y << std::endl;
+                frogCamera->localTransform.position.x = wallLPositon.x + 0.58;
+            }
+
+            if (frogPosition.x > wallRPositon.x - 0.58)
+            {
+                std::cout << "Right Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallRPositon.x << " Cy = " << wallRPositon.y << std::endl;
+                frogCamera->localTransform.position.x = wallRPositon.x - 0.58;
+            }
             // For each entity in the world
             for (auto entity : world->getEntities())
             {
@@ -109,26 +129,6 @@ namespace our
                                 frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
                             }
                         }
-                    }
-                }
-                else if (entity->name.find("tunnelR") == 0)
-                {
-                    glm::vec2 wallPositon = glm::vec2(entity->localTransform.position.x, entity->localTransform.position.z);
-
-                    if (frogPosition.x > wallPositon.x - 0.58)
-                    {
-                        std::cout << "Right Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallPositon.x << " Cy = " << wallPositon.y << std::endl;
-                        frogCamera->localTransform.position.x = wallPositon.x - 0.58;
-                    }
-                }
-                else if (entity->name.find("tunnelL") == 0)
-                {
-                    glm::vec2 wallPositon = glm::vec2(entity->localTransform.position.x, entity->localTransform.position.z);
-
-                    if ( frogPosition.x < wallPositon.x + 0.58)
-                    {
-                        std::cout << "Left Wall Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << wallPositon.x << " Cy = " << wallPositon.y << std::endl;
-                        frogCamera->localTransform.position.x = wallPositon.x + 0.58;
                     }
                 }
                 else
