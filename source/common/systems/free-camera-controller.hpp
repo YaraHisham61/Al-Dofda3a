@@ -119,16 +119,99 @@ namespace our
             // S & W moves the player back and forth
             // We change the camera position based on the keys WASD/QE
             // S & W moves the player back and forth
-            if (app->getKeyboard().isPressed(GLFW_KEY_W))
-            {
-                position += front * (deltaTime * current_sensitivity.z);
-                // positionCamera += front * (deltaTime * current_sensitivity.z);
-            }
+            /////////////////////////////////
 
-            if (app->getKeyboard().isPressed(GLFW_KEY_S))
+            ///////////////////////////////////////
+            if (app->getKeyboard().isPressed(GLFW_KEY_A) || app->getKeyboard().isPressed(GLFW_KEY_D))
             {
-                position -= front * (deltaTime * current_sensitivity.z);
-                // positionCamera -= front * (deltaTime * current_sensitivity.z);
+                if (app->getKeyboard().isPressed(GLFW_KEY_A))
+                {
+
+                    if (app->getKeyboard().isPressed(GLFW_KEY_W))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * 0.25f;
+                        position -= right * (deltaTime * current_sensitivity.x);
+                        position += front * (deltaTime * current_sensitivity.z);
+                    }
+                    else if (app->getKeyboard().isPressed(GLFW_KEY_S))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * 0.75f;
+                        position -= right * (deltaTime * current_sensitivity.x);
+                        position -= front * (deltaTime * current_sensitivity.z);
+                    }
+                    else
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * 0.5f;
+                        position -= right * (deltaTime * current_sensitivity.x);
+                    }
+                }
+                if (app->getKeyboard().isPressed(GLFW_KEY_D))
+                {
+                    if (app->getKeyboard().isPressed(GLFW_KEY_W))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * -0.25f;
+                        position += right * (deltaTime * current_sensitivity.x);
+                        position += front * (deltaTime * current_sensitivity.z);
+                    }
+                    else if (app->getKeyboard().isPressed(GLFW_KEY_S))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * -0.75f;
+                        position += right * (deltaTime * current_sensitivity.x);
+                        position -= front * (deltaTime * current_sensitivity.z);
+                    }
+                    else
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * -0.5f;
+                        position += right * (deltaTime * current_sensitivity.x);
+                    }
+                }
+            }
+            else if (app->getKeyboard().isPressed(GLFW_KEY_W) || app->getKeyboard().isPressed(GLFW_KEY_S))
+            {
+
+                if (app->getKeyboard().isPressed(GLFW_KEY_W))
+                {
+                    if (app->getKeyboard().isPressed(GLFW_KEY_A))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * 0.25f;
+                        position += front * (deltaTime * current_sensitivity.z);
+                        position -= right * (deltaTime * current_sensitivity.x);
+                    }
+                    else if (app->getKeyboard().isPressed(GLFW_KEY_D))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * -0.25f;
+                        position += front * (deltaTime * current_sensitivity.z);
+                        position += right * (deltaTime * current_sensitivity.x);
+                    }
+                    else
+                    {
+                        frog->localTransform.rotation.y = 0;
+                        position += front * (deltaTime * current_sensitivity.z);
+                    }
+                    // positionCamera += front * (deltaTime * current_sensitivity.z);
+                }
+
+                if (app->getKeyboard().isPressed(GLFW_KEY_S))
+                {
+                    if (app->getKeyboard().isPressed(GLFW_KEY_A))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * 0.75f;
+                        position -= front * (deltaTime * current_sensitivity.z);
+                        position -= right * (deltaTime * current_sensitivity.x);
+                    }
+                    else if (app->getKeyboard().isPressed(GLFW_KEY_D))
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>() * -0.75f;
+                        position -= front * (deltaTime * current_sensitivity.z);
+                        position += right * (deltaTime * current_sensitivity.x);
+                    }
+                    else
+                    {
+                        frog->localTransform.rotation.y = glm::pi<float>();
+                        position -= front * (deltaTime * current_sensitivity.z);
+                    }
+                    // positionCamera -= front * (deltaTime * current_sensitivity.z);
+                }
             }
             // Q & E moves the player up and down
             if (app->getKeyboard().isPressed(GLFW_KEY_Q))
@@ -136,15 +219,8 @@ namespace our
             if (app->getKeyboard().isPressed(GLFW_KEY_E))
                 position -= up * (deltaTime * current_sensitivity.y);
             // A & D moves the player left or right
-            if (app->getKeyboard().isPressed(GLFW_KEY_D))
-            {
-                position += right * (deltaTime * current_sensitivity.x);
-                // frog->localTransform.position += right * (deltaTime * current_sensitivity.x);
-                // frog->localTransform.rotation.y = glm::pi<float>() * -0.5f;
-            }
-            if (app->getKeyboard().isPressed(GLFW_KEY_A))
-                position -= right * (deltaTime * current_sensitivity.x);
 
+            // frog->localTransform.rotation.y = glm::pi<float>() * 0.5f;
             if (position.z <= -25.5 && position.x >= -0.856 && position.x <= 1.8)
             {
                 app->changeState("win");
