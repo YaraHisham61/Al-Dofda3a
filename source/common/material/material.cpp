@@ -81,4 +81,60 @@ namespace our
         sampler = AssetLoader<Sampler>::get(data.value("sampler", ""));
     }
 
+    void lightingMaterial::setup() const
+    {
+        TexturedMaterial::setup();
+        shader->set("material.emission", 0);
+        shader->set("material.ambient_occlusion", 1);
+        shader->set("material.specular", 2);
+        shader->set("material.roughness", 3);
+        shader->set("material.albedo", 4);
+        if (emission != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE0);
+            this->emission->bind();
+            this->sampler->bind(0);
+        }
+        if (ambient_occlusion != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE1);
+            this->ambient_occlusion->bind();
+            this->sampler->bind(1);
+        }
+        if (specular != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE2);
+
+            this->specular->bind();
+            this->sampler->bind(2);
+        }
+        if (roughness != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE3);
+
+            this->roughness->bind();
+            this->sampler->bind(3);
+        }
+        if (albedo != nullptr)
+        {
+            glActiveTexture(GL_TEXTURE4);
+            this->albedo->bind();
+            this->sampler->bind(4);
+        }
+    }
+
+    // This function read the material data from a json object
+    void lightingMaterial::deserialize(const nlohmann::json &data)
+    {
+        TexturedMaterial::deserialize(data);
+        if (!data.is_object())
+            return;
+        sampler = AssetLoader<Sampler>::get(data.value("sampler", ""));
+        albedo = AssetLoader<Texture2D>::get(data.value("albedo", ""));
+        specular = AssetLoader<Texture2D>::get(data.value("specular", ""));
+        emission = AssetLoader<Texture2D>::get(data.value("emission", ""));
+        roughness = AssetLoader<Texture2D>::get(data.value("roughness", ""));
+        ambient_occlusion = AssetLoader<Texture2D>::get(data.value("ambient_occlusion", ""));
+    }
+
 }

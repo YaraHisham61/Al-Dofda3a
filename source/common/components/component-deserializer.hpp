@@ -4,6 +4,7 @@
 #include "camera.hpp"
 #include "mesh-renderer.hpp"
 #include "free-camera-controller.hpp"
+#include "lighting.hpp"
 #include "movement.hpp"
 #include "car_movement.hpp"
 #include "bus_movement.hpp"
@@ -49,7 +50,6 @@ namespace our
         {
             component = entity->addComponent<MeshRendererComponent>();
         }
-        
         if (component)
             component->deserialize(data);
     }
