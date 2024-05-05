@@ -5,6 +5,7 @@
 #include "mesh-renderer.hpp"
 #include "free-camera-controller.hpp"
 #include "frog-camera-controller.hpp"
+#include "lighting.hpp"
 #include "movement.hpp"
 #include "car_movement.hpp"
 
@@ -42,6 +43,10 @@ namespace our
         else if (type == FrogCameraControllerComponent::getID())
         {
             component = entity->addComponent<FrogCameraControllerComponent>();
+        }
+         else if (type == lightingComponent::getID())
+        {
+            component = entity->addComponent<lightingComponent>();
         }
         if (component)
             component->deserialize(data);

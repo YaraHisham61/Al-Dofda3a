@@ -134,7 +134,7 @@ namespace our
         // First of all, we search for a camera and for all the mesh renderers
         CameraComponent *camera = nullptr;
         opaqueCommands.clear();
-        lightingComponent.clear();
+        Lights.clear();
         transparentCommands.clear();
         for (auto entity : world->getEntities())
         {
@@ -212,35 +212,35 @@ namespace our
         for (auto command : opaqueCommands)
         {
             command.material->setup();
-            if (auto light_material = dynamic_cast<LightingMaterial *>(command.material); light_material)
+            if (auto light_material = dynamic_cast<lightingMaterial *>(command.material); light_material)
             {
-                // glm::vec3 sky_top = glm::vec3(0.01f, 0.01f, 0.01f);
-                // glm::vec3 sky_middle = glm::vec3(0.01f, 0.01f, 0.01f);
+                // glm::vec3 sky_top = glm::vec3(0.0f, 0.1f, 0.5f);
+                // glm::vec3 sky_horizon = glm::vec3(0.3f, 0.3f, 0.3f);
                 // glm::vec3 sky_bottom = glm::vec3(0.01f, 0.01f, 0.01f);
                 // light_material->shader->set("sky.top", sky_top);
-                // light_material->shader->set("sky.middle", sky_middle);
+                // light_material->shader->set("sky.horizon", sky_horizon);
                 // light_material->shader->set("sky.bottom", sky_bottom);
 
                 command.material->shader->set("camera_postion", cameraPoint);
                 command.material->shader->set("VP", VP);
                 command.material->shader->set("M", command.localToWorld);
-                command.material->shader->set("light_count", Lights.size());
-                glm::mat4 M_I = glm::inverse(command.localToWorld);
-                glUniformMatrix4fv(getUniformLocation("M_IT"), 1, true, &M_I[0][0]);
+                command.material->shader->set("light_count", (int)Lights.size());
+                command.material->shader->set("M_IT", glm::transpose(glm::inverse(command.localToWorld)));
+                int i = 0;
                 for (auto light : Lights)
                 {
-                    auto position = light->getOwner()->getLocalToWorldMatrix();
-                    glm::vec3 lightposition = position * light->position;
-                    glm::vec3 lightdirection = lightposition - cameraPoint;
-                    light_material->shader->set("lights[" + std::to_string(i) + "].type", (int)light->type);
+                    glm::mat4 position = light->getOwner()->getLocalToWorldMatrix();
+                    glm::vec3 lightposition = position * glm::vec4(light->position, 1.0);
+                    glm::vec3 lightdirection = glm::vec4(light->direction, 0.0);
+                    light_material->shader->set("lights[" + std::to_string(i) + "].Typed", (int)light->Typed);
                     light_material->shader->set("lights[" + std::to_string(i) + "].color", light->color);
                     light_material->shader->set("lights[" + std::to_string(i) + "].specular", light->specular);
 
-                    if (light->type == 0) // directional light
+                    if (light->Typed == 0) // directional light
                     {
                         light_material->shader->set("lights[" + std::to_string(i) + "].direction", lightdirection);
                     }
-                    else if (light->type == 1) // point light
+                    else if (light->Typed == 1) // point light
                     {
                         light_material->shader->set("lights[" + std::to_string(i) + "].position", lightposition);
                         light_material->shader->set("lights[" + std::to_string(i) + "].attenuation", light->attenuation);
@@ -252,6 +252,7 @@ namespace our
                         light_material->shader->set("lights[" + std::to_string(i) + "].direction", lightdirection);
                         light_material->shader->set("lights[" + std::to_string(i) + "].cone_angles", light->cone_angles);
                     }
+                    i++;
                 }
             }
             else
@@ -297,35 +298,35 @@ namespace our
         for (auto command : transparentCommands)
         {
             command.material->setup();
-            if (auto light_material = dynamic_cast<LightingMaterial *>(command.material); light_material)
+            if (auto light_material = dynamic_cast<lightingMaterial *>(command.material); light_material)
             {
-                // glm::vec3 sky_top = glm::vec3(0.01f, 0.01f, 0.01f);
-                // glm::vec3 sky_middle = glm::vec3(0.01f, 0.01f, 0.01f);
+                // glm::vec3 sky_top = glm::vec3(0.0f, 0.1f, 0.5f);
+                // glm::vec3 sky_horizon = glm::vec3(0.3f, 0.3f, 0.3f);
                 // glm::vec3 sky_bottom = glm::vec3(0.01f, 0.01f, 0.01f);
                 // light_material->shader->set("sky.top", sky_top);
-                // light_material->shader->set("sky.middle", sky_middle);
+                // light_material->shader->set("sky.horizon", sky_horizon);
                 // light_material->shader->set("sky.bottom", sky_bottom);
 
                 command.material->shader->set("camera_postion", cameraPoint);
                 command.material->shader->set("VP", VP);
                 command.material->shader->set("M", command.localToWorld);
-                command.material->shader->set("light_count", Lights.size());
-                glm::mat4 M_I = glm::inverse(command.localToWorld);
-                glUniformMatrix4fv(getUniformLocation("M_IT"), 1, true, &M_I[0][0]);
+                command.material->shader->set("light_count", (int)Lights.size());
+                command.material->shader->set("M_IT", glm::transpose(glm::inverse(command.localToWorld)));
+                int i = 0;
                 for (auto light : Lights)
                 {
-                    auto position = light->getOwner()->getLocalToWorldMatrix();
-                    glm::vec3 lightposition = position * light->position;
-                    glm::vec3 lightdirection = lightposition - cameraPoint;
-                    light_material->shader->set("lights[" + std::to_string(i) + "].type", (int)light->type);
+                    glm::mat4 position = light->getOwner()->getLocalToWorldMatrix();
+                    glm::vec3 lightposition = position * glm::vec4(light->position, 1.0);
+                    glm::vec3 lightdirection =  glm::vec4(light->direction, 0.0);
+                    light_material->shader->set("lights[" + std::to_string(i) + "].Typed", (int)light->Typed);
                     light_material->shader->set("lights[" + std::to_string(i) + "].color", light->color);
                     light_material->shader->set("lights[" + std::to_string(i) + "].specular", light->specular);
 
-                    if (light->type == 0) // directional light
+                    if (light->Typed == 0) // directional light
                     {
                         light_material->shader->set("lights[" + std::to_string(i) + "].direction", lightdirection);
                     }
-                    else if (light->type == 1) // point light
+                    else if (light->Typed == 1) // point light
                     {
                         light_material->shader->set("lights[" + std::to_string(i) + "].position", lightposition);
                         light_material->shader->set("lights[" + std::to_string(i) + "].attenuation", light->attenuation);
@@ -338,6 +339,7 @@ namespace our
                         light_material->shader->set("lights[" + std::to_string(i) + "].cone_angles", light->cone_angles);
                     }
                 }
+                i++;
             }
             else
 

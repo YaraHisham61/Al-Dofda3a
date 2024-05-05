@@ -84,20 +84,22 @@ namespace our
     void lightingMaterial::setup() const
     {
         TexturedMaterial::setup();
-
+        shader->set("material.emission", 0);
+        shader->set("material.ambient_occlusion", 1);
+        shader->set("material.specular", 2);
+        shader->set("material.roughness", 3);
+        shader->set("material.albedo", 4);
         if (emission != nullptr)
         {
             glActiveTexture(GL_TEXTURE0);
             this->emission->bind();
             this->sampler->bind(0);
-            shader->set("material.emission", emission);
         }
         if (ambient_occlusion != nullptr)
         {
             glActiveTexture(GL_TEXTURE1);
             this->ambient_occlusion->bind();
             this->sampler->bind(1);
-            shader->set("material.ambient_occlusion", ambient_occlusion);
         }
         if (specular != nullptr)
         {
@@ -105,8 +107,6 @@ namespace our
 
             this->specular->bind();
             this->sampler->bind(2);
-
-            shader->set("material.specular", specular);
         }
         if (roughness != nullptr)
         {
@@ -114,17 +114,12 @@ namespace our
 
             this->roughness->bind();
             this->sampler->bind(3);
-
-            shader->set("material.roughness", roughness);
         }
         if (albedo != nullptr)
         {
             glActiveTexture(GL_TEXTURE4);
-
             this->albedo->bind();
             this->sampler->bind(4);
-
-            shader->set("material.albedo", albedo);
         }
     }
 
@@ -132,8 +127,6 @@ namespace our
     void lightingMaterial::deserialize(const nlohmann::json &data)
     {
         TexturedMaterial::deserialize(data);
-        if (!data.is_object())
-            return;
         if (!data.is_object())
             return;
         sampler = AssetLoader<Sampler>::get(data.value("sampler", ""));

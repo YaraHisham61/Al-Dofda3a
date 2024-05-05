@@ -1,8 +1,7 @@
 #pragma once
 
 #include "../ecs/component.hpp"
-#include "../material/material.hpp"
-#include "../asset-loader.hpp"
+#include <glm/glm.hpp>
 
 namespace our
 {
@@ -11,15 +10,15 @@ namespace our
     {
 
     public:
-        int type;
-        glm::vec3 color = glm::vec3(0, 0, 0);// same as diffussion
-        glm::vec3 position = glm::vec3(0, 0, 0);
-        glm::vec3 direction = glm::vec3(0, 0, 0);
-        glm::vec3 specular = glm::vec3(0, 0, 0);
-        glm::vec2 cone_angles = glm::vec2(0.0f, 0.0f);
-        glm::vec3 attenuation = glm::vec3(0.0f, 0.0f, 0.0f);
+        int Typed=0;
+        glm::vec3 color = {1, 0.9, 0.7};// same as diffussion
+        glm::vec3 position =  {0, 0, 0 };
+        glm::vec3 direction =  {0, 0, 0 };
+        glm::vec3 specular =  {1, 0.9, 0.7 };
+        glm::vec2 cone_angles =  {0.0f, 0.0f };
+        glm::vec3 attenuation =  {0.0f, 0.0f, 0.0f };
 
         static std::string getID() { return "lighting"; }
         void deserialize(const nlohmann::json &data) override;
-    }
+    };
 }

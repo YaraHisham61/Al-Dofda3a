@@ -22,6 +22,10 @@
         "textured": {
           "vs": "assets/shaders/textured.vert",
           "fs": "assets/shaders/textured.frag"
+        },
+        "lighting": {
+          "vs": "assets/shaders/simple.vert",
+          "fs": "assets/shaders/simple.frag"
         }
       },
       "textures": {
@@ -35,7 +39,15 @@
         "frog": "assets/textures/froga.jpg",
         "wall": "assets/textures/wall.jpg",
         "car1": "assets/textures/car1.png",
-        "tunnel": "assets/textures/tunnel.jpg"
+        "tunnel": "assets/textures/tunnel.jpg",
+        "albedo": "assets/textures/albedo.jpg",
+        "specular": "assets/textures/specular.jpg",
+        "roughness": "assets/textures/roughness.jpg",
+        "black": "assets/textures/black.jpg",
+        "white": "assets/textures/white.jpg",
+        "gray": "assets/textures/gray.png",
+        "gray_cute": "assets/textures/gray_cute.png",
+        "lamp": "assets/textures/lamp.png"
       },
       "meshes": {
         "cube": "assets/models/cube.obj",
@@ -45,7 +57,8 @@
         "frog": "assets/models/froga.obj",
         "wall": "assets/models/wall.obj",
         "car1": "assets/models/car1.obj",
-        "tunnel": "assets/models/tunnel.obj"
+        "tunnel": "assets/models/tunnel.obj",
+        "spot_lamp": "assets/models/Street_Lamp.obj"
       },
       "samplers": {
         "default": {},
@@ -60,6 +73,31 @@
         }
       },
       "materials": {
+        "spot_lamp": {
+          "type": "lighting",
+          "shader": "lighting",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "texture": "gray_cute",
+          "sampler": "default",
+          "albedo": "albedo",
+          "specular": "white",
+          "roughness": "roughness",
+          "emission": "white",
+          "ambient_occlusion": "ambient_occlusion"
+        },
         "metal": {
           "type": "tinted",
           "shader": "tinted",
@@ -71,7 +109,12 @@
               "enabled": true
             }
           },
-          "tint": [0.45, 0.4, 0.5, 1]
+          "tint": [
+            0.45,
+            0.4,
+            0.5,
+            1
+          ]
         },
         "glass": {
           "type": "textured",
@@ -91,13 +134,18 @@
             "depthMask": false
           },
           "transparent": true,
-          "tint": [1, 1, 1, 1],
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
           "texture": "glass",
           "sampler": "pixelated"
         },
         "grass": {
-          "type": "textured",
-          "shader": "textured",
+          "type": "lighting",
+          "shader": "lighting",
           "pipelineState": {
             "faceCulling": {
               "enabled": false
@@ -106,13 +154,22 @@
               "enabled": true
             }
           },
-          "tint": [1, 1, 1, 1],
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
           "texture": "grass",
-          "sampler": "default"
+          "sampler": "default",
+          "albedo": "grass",
+          "specular": "grass",
+          "roughness": "roughness",
+          "ambient_occlusion": "grass"
         },
         "car1": {
-          "type": "textured",
-          "shader": "textured",
+          "type": "lighting",
+          "shader": "lighting",
           "pipelineState": {
             "faceCulling": {
               "enabled": false
@@ -121,9 +178,18 @@
               "enabled": true
             }
           },
-          "tint": [1, 1, 1, 1],
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
           "texture": "car1",
-          "sampler": "default"
+          "sampler": "default",
+          "albedo": "car1",
+          "roughness": "roughness",
+          "ambient_occlusion": "ambient_occlusion",
+          "specular": "black"
         },
         "monkey": {
           "type": "textured",
@@ -136,7 +202,12 @@
               "enabled": true
             }
           },
-          "tint": [1, 1, 1, 1],
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
           "texture": "monkey",
           "sampler": "default"
         },
@@ -151,7 +222,12 @@
               "enabled": true
             }
           },
-          "tint": [1, 1, 1, 1],
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
           "texture": "moon",
           "sampler": "default"
         },
@@ -166,7 +242,12 @@
               "enabled": true
             }
           },
-          "tint": [0.5, 0.5, 0.6, 1],
+          "tint": [
+            0.5,
+            0.5,
+            0.6,
+            1
+          ],
           "texture": "wall",
           "sampler": "repeated"
         },
@@ -181,7 +262,12 @@
               "enabled": true
             }
           },
-          "tint": [0.9, 0.9, 0.9, 1],
+          "tint": [
+            0.9,
+            0.9,
+            0.9,
+            1
+          ],
           "texture": "crossing_road",
           "sampler": "repeated"
         },
@@ -196,7 +282,12 @@
               "enabled": true
             }
           },
-          "tint": [0.5, 0.5, 0.6, 1],
+          "tint": [
+            0.5,
+            0.5,
+            0.6,
+            1
+          ],
           "texture": "water",
           "sampler": "default"
         },
@@ -211,7 +302,12 @@
               "enabled": true
             }
           },
-          "tint": [1, 1, 1, 1],
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
           "texture": "frog",
           "sampler": "default"
         },
@@ -226,18 +322,34 @@
               "enabled": true
             }
           },
-          "tint": [1, 1, 1, 1],
+          "tint": [
+            1,
+            1,
+            1,
+            1
+          ],
           "texture": "tunnel",
           "sampler": "default"
         }
       }
     },
-
     "world": [
       {
-        "position": [0, 0, -2],
-        "rotation": [0, 90, 0],
-        "scale": [0.6, 0.7, 0.8],
+        "position": [
+          0,
+          0,
+          -2
+        ],
+        "rotation": [
+          0,
+          90,
+          0
+        ],
+        "scale": [
+          0.6,
+          0.7,
+          0.8
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -246,7 +358,11 @@
           },
           {
             "type": "CarMovement",
-            "linearVelocity": [2, 0, 0]
+            "linearVelocity": [
+              2,
+              0,
+              0
+            ]
             // "angularVelocity": [0, 45, 0]
           }
         ]
@@ -254,9 +370,21 @@
       /////////////////////// Walls ///////////////////////////
       {
         "name": "tunnel2",
-        "position": [-9, -0.5, -3.05],
-        "rotation": [-90, 0, 90],
-        "scale": [0.01, 0.01, 0.02],
+        "position": [
+          -9,
+          -0.5,
+          -3.05
+        ],
+        "rotation": [
+          -90,
+          0,
+          90
+        ],
+        "scale": [
+          0.01,
+          0.01,
+          0.02
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -265,12 +393,23 @@
           }
         ]
       },
-
       {
         "name": "tunnel3",
-        "position": [-9, -0.5, 0.95],
-        "rotation": [-90, 0, 90],
-        "scale": [0.01, 0.01, 0.02],
+        "position": [
+          -9,
+          -0.5,
+          0.95
+        ],
+        "rotation": [
+          -90,
+          0,
+          90
+        ],
+        "scale": [
+          0.01,
+          0.01,
+          0.02
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -281,9 +420,21 @@
       },
       {
         "name": "tunnel4",
-        "position": [9, -0.5, 0.95],
-        "rotation": [-90, 180, 90],
-        "scale": [0.01, 0.01, 0.02],
+        "position": [
+          9,
+          -0.5,
+          0.95
+        ],
+        "rotation": [
+          -90,
+          180,
+          90
+        ],
+        "scale": [
+          0.01,
+          0.01,
+          0.02
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -292,7 +443,62 @@
           }
         ]
       },
-
+      {
+        "name": "spot_lamp",
+        "scale": [
+          0.001,
+          0.001,
+          0.001
+        ],
+        "position": [
+          1,
+          0.5,
+          0.5
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "spot_lamp",
+            "material": "spot_lamp"
+          },
+          {
+            "type": "lighting",
+            "Typed": 2,
+            "direction": [
+              0,
+              -1,
+              0
+            ],
+            "position": [
+              1,
+              1,
+              0.5
+            ],
+            "diffuse": [
+             1,
+              0,
+              0
+            ],
+            "specular": [
+              1,
+              0,
+              0
+            ],
+            "attenuation": [
+              0.05,
+              0.05,
+              0.05
+            ],
+            "cone_angles.inner": 20,
+            "cone_angles.outer": 50
+          }
+        ]
+      },
       // {
       //   "position": [-9, -0.5, -3.05],
       //   "rotation": [90, 0, 0],
@@ -341,7 +547,6 @@
       //     }
       //   ]
       // },
-
       // {
       //   "position": [-8, 1, -10],
       //   "rotation": [0, 0, 0],
@@ -356,8 +561,16 @@
       // },
       {
         "name": "camera",
-        "position": [0.5, 2.5, 4],
-        "rotation": [0, 0, 0],
+        "position": [
+          0.5,
+          2.5,
+          4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
         "components": [
           {
             "type": "Camera"
@@ -369,9 +582,21 @@
         "children": [
           {
             "name": "frog",
-            "position": [0, -2.5, -4],
-            "rotation": [-90, 0, 0],
-            "scale": [0.04, 0.04, 0.04],
+            "position": [
+              0,
+              -2.5,
+              -4
+            ],
+            "rotation": [
+              -90,
+              0,
+              0
+            ],
+            "scale": [
+              0.04,
+              0.04,
+              0.04
+            ],
             "components": [
               {
                 "type": "Mesh Renderer",
@@ -382,11 +607,22 @@
           }
         ]
       },
-
       {
-        "position": [0, 0, 2],
-        "rotation": [-90, -90, 0],
-        "scale": [1, 20, 1],
+        "position": [
+          0,
+          0,
+          2
+        ],
+        "rotation": [
+          -90,
+          -90,
+          0
+        ],
+        "scale": [
+          1,
+          20,
+          1
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -395,11 +631,22 @@
           }
         ]
       },
-
       {
-        "position": [0, 0, 0],
-        "rotation": [-90, -90, 0],
-        "scale": [1, 20, 1],
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          -90,
+          -90,
+          0
+        ],
+        "scale": [
+          1,
+          20,
+          1
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -409,9 +656,21 @@
         ]
       },
       {
-        "position": [0, 0, -3],
-        "rotation": [-90, -90, 0],
-        "scale": [2, 20, 1],
+        "position": [
+          0,
+          0,
+          -3
+        ],
+        "rotation": [
+          -90,
+          -90,
+          0
+        ],
+        "scale": [
+          2,
+          20,
+          1
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -421,9 +680,21 @@
         ]
       },
       {
-        "position": [0, 0, -7],
-        "rotation": [-90, -90, 0],
-        "scale": [2, 20, 1],
+        "position": [
+          0,
+          0,
+          -7
+        ],
+        "rotation": [
+          -90,
+          -90,
+          0
+        ],
+        "scale": [
+          2,
+          20,
+          1
+        ],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -433,9 +704,21 @@
         ]
       },
       {
-        "position": [0, 0, -10],
-        "rotation": [-90, -90, 0],
-        "scale": [1, 20, 1],
+        "position": [
+          0,
+          0,
+          -10
+        ],
+        "rotation": [
+          -90,
+          -90,
+          0
+        ],
+        "scale": [
+          1,
+          20,
+          1
+        ],
         "components": [
           {
             "type": "Mesh Renderer",

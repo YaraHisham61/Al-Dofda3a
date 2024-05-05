@@ -15,11 +15,11 @@ uniform mat4 M_IT;
 //Gluint mit_loc=glGetUniformLocation(program,M_IT);
 
 out Varyings {
-    vec3 world;
     vec4 color;
     vec2 tex_coord;
     vec3 normal;
-    vec3 view;
+    vec3 world;
+    vec3 view;// vector form objec to camera
 } vs_out;
 
 void main(){
