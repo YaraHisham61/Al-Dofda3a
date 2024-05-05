@@ -42,7 +42,7 @@
         "bus": "assets/textures/bus.jpg",
         "stick": "assets/textures/stick.png",
         "heart": "assets/textures/heart.png",
-        "skull": "assets/models/moon.jpg"
+        "skull": "assets/textures/metallic_gray.jpg"
       },
       "meshes": {
         "cube": "assets/models/cube.obj",
@@ -99,7 +99,7 @@
               "enabled": true
             }
           },
-          "tint": [1, 1, 1, 1],
+          "tint": [0.6, 0.6, 0.6, 1],
           "texture": "skull",
           "sampler": "default"
         },
@@ -777,19 +777,6 @@
         ],
         "children": [
           {
-            "name": "skull",
-            "position": [0, -0.5, 0.95],
-            "rotation": [90, -20, 0],
-            "scale": [0.0, 0.0, 0.0],
-            "components": [
-              {
-                "type": "Mesh Renderer",
-                "mesh": "skull",
-                "material": "skull"
-              }
-            ]
-          },
-          {
             "name": "frog",
             "position": [0, -2.5, -4],
             "rotation": [-90, 0, 0],
@@ -838,6 +825,19 @@
                 "type": "Mesh Renderer",
                 "mesh": "heart",
                 "material": "heart"
+              }
+            ]
+          },
+          {
+            "name": "skull",
+            "position": [0, 0.5, -5],
+            "rotation": [90, -11.5, 0],
+            "scale": [0, 0, 0],
+            "components": [
+              {
+                "type": "Mesh Renderer",
+                "mesh": "skull",
+                "material": "skull"
               }
             ]
           }

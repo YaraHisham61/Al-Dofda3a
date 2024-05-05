@@ -28,6 +28,7 @@ namespace our
     static Entity *frontWall1;
     static Entity *frontWall2;
     static Entity *frontWallExtend2;
+    static Entity *skull;
 
     std::unordered_map<float, std::vector<Entity *>> woods;
     // The Collision system is responsible for detecting collision of frog with every car which contains a CarMovementComponent.
@@ -78,6 +79,10 @@ namespace our
                 {
                     frontWallExtend2 = entity;
                 }
+                else if (entity->name == "skull")
+                {
+                    skull = entity;
+                }
                 else
                 {
                     WoodMovementComponent *wood = entity->getComponent<WoodMovementComponent>();
@@ -96,6 +101,7 @@ namespace our
         // This should be called every frame to update all entities containing a MovementComponent.
         void update(World *world, float deltaTime, Application *app)
         {
+
             // initial position.z of camera is  4 so we store the camera (position.z-4) to get the abs. positiion
             glm::vec2 frogPosition = glm::vec2(frogCamera->localTransform.position.x, frogCamera->localTransform.position.z - 4);
             frog->localTransform.position.y = -2.5;
