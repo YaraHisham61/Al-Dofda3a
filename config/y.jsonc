@@ -22,6 +22,10 @@
         "textured": {
           "vs": "assets/shaders/textured.vert",
           "fs": "assets/shaders/textured.frag"
+        },
+        "lighting": {
+          "vs": "assets/shaders/simple.vert",
+          "fs": "assets/shaders/simple.frag"
         }
       },
       "textures": {
@@ -42,7 +46,15 @@
         "bus": "assets/textures/bus.jpg",
         "stick": "assets/textures/stick.png",
         "heart": "assets/textures/heart.png",
-        "skull": "assets/textures/metallic_gray.jpg"
+        "skull": "assets/textures/metallic_gray.jpg",
+        "albedo": "assets/textures/albedo.jpg",
+        "specular": "assets/textures/specular.jpg",
+        "roughness": "assets/textures/roughness.jpg",
+        "black": "assets/textures/black.jpg",
+        "white": "assets/textures/white.jpg",
+        "gray": "assets/textures/gray.png",
+        "gray_cute": "assets/textures/gray_cute.png",
+        "lamp": "assets/textures/lamp.png"
       },
       "meshes": {
         "cube": "assets/models/cube.obj",
@@ -58,7 +70,8 @@
         "bus": "assets/models/bus.obj",
         "stick": "assets/models/stick.obj",
         "heart": "assets/models/heart.obj",
-        "skull": "assets/models/skull.obj"
+        "skull": "assets/models/skull.obj",
+        "spot_lamp": "assets/models/Street_Lamp.obj"
       },
       "samplers": {
         "default": {},
@@ -73,6 +86,26 @@
         }
       },
       "materials": {
+        "spot_lamp": {
+          "type": "lighting",
+          "shader": "lighting",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "gray_cute",
+          "sampler": "default",
+          "albedo": "albedo",
+          "specular": "white",
+          "roughness": "roughness",
+          "emission": "white",
+          "ambient_occlusion": "ambient_occlusion"
+        },
         "grass": {
           "type": "textured",
           "shader": "textured",
@@ -86,7 +119,11 @@
           },
           "tint": [1, 1, 1, 1],
           "texture": "grass",
-          "sampler": "default"
+          "sampler": "default",
+          "albedo": "grass",
+          "specular": "grass",
+          "roughness": "roughness",
+          "ambient_occlusion": "grass"
         },
         "skull": {
           "type": "textured",
@@ -289,6 +326,31 @@
     },
 
     "world": [
+      //////////////////////lamp////////////////////
+      {
+        "name": "spot_lamp",
+        "scale": [0.001, 0.001, 0.001],
+        "position": [1, 0.5, 0.5],
+        "rotation": [0, 0, 0],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "spot_lamp",
+            "material": "spot_lamp"
+          },
+          {
+            "type": "lighting",
+            "Typed": 2,
+            "direction": [0, -1, 0],
+            "position": [1, 1, 0.5],
+            "diffuse": [1, 0, 0],
+            "specular": [1, 0, 0],
+            "attenuation": [0.05, 0.05, 0.05],
+            "cone_angles.inner": 20,
+            "cone_angles.outer": 50
+          }
+        ]
+      },
       ///////////////////// Car /////////////////////////
       {
         "position": [0, 0, -2],
