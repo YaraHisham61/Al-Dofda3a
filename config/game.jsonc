@@ -10,7 +10,7 @@
   },
   "scene": {
     "renderer": {
-      "sky": "assets/textures/sky.jpg",
+      "sky": "assets/textures/sky-night2.jpg",
       "postprocess": "assets/shaders/postprocess/vignette.frag"
     },
     "assets": {
@@ -87,6 +87,21 @@
         }
       },
       "materials": {
+        "moon": {
+          "type": "textured",
+          "shader": "textured",
+          "pipelineState": {
+            "faceCulling": {
+              "enabled": false
+            },
+            "depthTesting": {
+              "enabled": true
+            }
+          },
+          "tint": [1, 1, 1, 1],
+          "texture": "moon",
+          "sampler": "default"
+        },
         "spot_lamp": {
           "type": "lighting",
           "shader": "lighting",
@@ -327,6 +342,23 @@
     },
 
     "world": [
+      {
+        "name": "moon",
+        "position": [-18, 30, -55],
+        "rotation": [45, 45, 0],
+        "scale": [6, 6, 6],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "sphere",
+            "material": "moon"
+          },
+          {
+            "type": "Movement",
+            "angularVelocity": [0, 10, 0]
+          }
+        ]
+      },
       //////////////////////lamp////////////////////
       {
         "name": "spot_lamp",
@@ -366,7 +398,6 @@
           {
             "type": "CarMovement",
             "linearVelocity": [5, 0, 0]
-            // "angularVelocity": [0, 45, 0]
           }
         ]
       },
@@ -384,7 +415,6 @@
           {
             "type": "BusMovement",
             "linearVelocity": [-3, 0, 0]
-            // "angularVelocity": [0, 45, 0]
           }
         ]
       },
@@ -434,7 +464,6 @@
           {
             "type": "CarMovement",
             "linearVelocity": [10, 0, 0]
-            // "angularVelocity": [0, 45, 0]
           }
         ]
       },
