@@ -29,6 +29,7 @@ namespace our
     static Entity *frontWall2;
     static Entity *frontWallExtend2;
     static Entity *skull;
+    static float skullTimer = 0.0f;
 
     std::unordered_map<float, std::vector<Entity *>> woods;
     // The Collision system is responsible for detecting collision of frog with every car which contains a CarMovementComponent.
@@ -101,7 +102,16 @@ namespace our
         // This should be called every frame to update all entities containing a MovementComponent.
         void update(World *world, float deltaTime, Application *app)
         {
-
+            if (glfwGetTime() - skullTimer < 1.0f)
+            {
+                frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
+                frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
+                return;
+            }
+            else
+            {
+                skull->localTransform.scale = glm::vec3(0, 0, 0);
+            }
             // initial position.z of camera is  4 so we store the camera (position.z-4) to get the abs. positiion
             glm::vec2 frogPosition = glm::vec2(frogCamera->localTransform.position.x, frogCamera->localTransform.position.z - 4);
             frog->localTransform.position.y = -2.5;
@@ -152,9 +162,10 @@ namespace our
                         {
                             // std::cout << "Car Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << carPositon.x << " Cy = " << carPositon.y << std::endl;
                             heartsLeft--;
-                            // Add Some Warning ??
+                            skull->localTransform.scale = glm::vec3(0.15, 0.15, 0.15);
                             frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
                             frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
+                            skullTimer = glfwGetTime();
                         }
                     }
                 }
@@ -174,9 +185,10 @@ namespace our
                                 // std::cout << "Bus Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << busPositon.x << " Cy = " << busPositon.y << std::endl;
 
                                 heartsLeft--;
-                                // Add Some Warning ??
+                                skull->localTransform.scale = glm::vec3(0.15, 0.15, 0.15);
                                 frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
                                 frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
+                                skullTimer = glfwGetTime();
                             }
                         }
                     }
@@ -205,16 +217,17 @@ namespace our
 
                         // dropped in water
                         // std::cout << "Water Collision @ position Fx = " << frogPosition.x << " Fy = " << frogPosition.y << " Cx = " << woodPosition.x << " Cy = " << woodPosition.y << std::endl;
-
                         heartsLeft--;
-                        // Add Some Warning ??
+                        skull->localTransform.scale = glm::vec3(0.15, 0.15, 0.15);
                         frogCamera->localTransform.position = glm::vec3(0.5, 2.5, 4);
                         frog->localTransform.rotation = glm::vec3(-0.5f * glm::pi<float>(), 0, 0);
+                        skullTimer = glfwGetTime();
                     }
                 }
             }
             updateHearts(app);
         }
+
         void updateHearts(Application *app)
         {
             switch (heartsLeft)

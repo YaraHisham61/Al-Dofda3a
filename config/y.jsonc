@@ -108,8 +108,8 @@
           "ambient_occlusion": "ambient_occlusion"
         },
         "grass": {
-          "type": "textured",
-          "shader": "textured",
+          "type": "lighting",
+          "shader": "lighting",
           "pipelineState": {
             "faceCulling": {
               "enabled": false
