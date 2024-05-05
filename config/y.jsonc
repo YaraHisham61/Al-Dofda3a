@@ -54,7 +54,8 @@
         "white": "assets/textures/white.jpg",
         "gray": "assets/textures/gray.png",
         "gray_cute": "assets/textures/gray_cute.png",
-        "lamp": "assets/textures/lamp.png"
+        "lamp": "assets/textures/lamp.png",
+        "ambient_occlusion": "assets/textures/ambient_occlusion.jpg"
       },
       "meshes": {
         "cube": "assets/models/cube.obj",

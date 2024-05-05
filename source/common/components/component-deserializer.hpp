@@ -50,6 +50,10 @@ namespace our
         {
             component = entity->addComponent<MeshRendererComponent>();
         }
+        else if (type == lightingComponent::getID())
+        {
+            component = entity->addComponent<lightingComponent>();
+        }
         if (component)
             component->deserialize(data);
     }
