@@ -188,11 +188,11 @@ namespace our
                         frog->localTransform.rotation.y = 0;
                         position += front * (deltaTime * current_sensitivity.z);
                     }
-                    // positionCamera += front * (deltaTime * current_sensitivity.z);
                 }
 
                 if (app->getKeyboard().isPressed(GLFW_KEY_S))
                 {
+                 
                     if (app->getKeyboard().isPressed(GLFW_KEY_A))
                     {
                         frog->localTransform.rotation.y = glm::pi<float>() * 0.75f;
@@ -210,21 +210,18 @@ namespace our
                         frog->localTransform.rotation.y = glm::pi<float>();
                         position -= front * (deltaTime * current_sensitivity.z);
                     }
-                    // positionCamera -= front * (deltaTime * current_sensitivity.z);
                 }
             }
-            // Q & E moves the player up and down
-            if (app->getKeyboard().isPressed(GLFW_KEY_Q))
-                position += up * (deltaTime * current_sensitivity.y);
-            if (app->getKeyboard().isPressed(GLFW_KEY_E))
-                position -= up * (deltaTime * current_sensitivity.y);
-            // A & D moves the player left or right
+            
+            if(position.z > 4){ // back limit 
+                position.z = 4;
+            }
 
-            // frog->localTransform.rotation.y = glm::pi<float>() * 0.5f;
             if (position.z <= -25.5 && position.x >= -0.856 && position.x <= 1.8)
             {
                 app->changeState("win");
             }
+      
         }
         // When the state exits, it should call this function to ensure the mouse is unlocked
         void exit()
