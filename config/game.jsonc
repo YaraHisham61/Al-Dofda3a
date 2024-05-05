@@ -88,8 +88,8 @@
       },
       "materials": {
         "moon": {
-          "type": "textured",
-          "shader": "textured",
+          "type": "lighting",
+          "shader": "lighting",
           "pipelineState": {
             "faceCulling": {
               "enabled": false
@@ -100,7 +100,12 @@
           },
           "tint": [1, 1, 1, 1],
           "texture": "moon",
-          "sampler": "default"
+          "sampler": "default",
+          "albedo": "albedo",
+          "specular": "white",
+          "roughness": "roughness",
+          "emission": "gray_cute",
+          "ambient_occlusion": "ambient_occlusion"
         },
         "spot_lamp": {
           "type": "lighting",
@@ -219,8 +224,8 @@
           "sampler": "repeated"
         },
         "crossing_road": {
-          "type": "textured",
-          "shader": "textured",
+          "type": "lighting",
+          "shader": "lighting",
           "pipelineState": {
             "faceCulling": {
               "enabled": false
@@ -231,7 +236,11 @@
           },
           "tint": [0.9, 0.9, 0.9, 1],
           "texture": "crossing_road",
-          "sampler": "repeated"
+          "sampler": "repeated",
+          "albedo": "albedo",
+          "specular": "white",
+          "roughness": "roughness",
+          "ambient_occlusion": "ambient_occlusion"
         },
         "water": {
           "type": "textured",
@@ -356,6 +365,17 @@
           {
             "type": "Movement",
             "angularVelocity": [0, 10, 0]
+          },
+          {
+            "type": "lighting",
+            "Typed": 1,
+            "direction": [0, -1, 0],
+            "position": [-18, 30, -55],
+            "diffuse": [0.2, 0.2, 0.2],
+            "specular": [0.7, 0.6, 0.7],
+            "attenuation": [0.05, 0.05, 0.05],
+            "cone_angles.inner": 20,
+            "cone_angles.outer": 50
           }
         ]
       },
