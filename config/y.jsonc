@@ -990,11 +990,11 @@
         ]
       },
       ////////////// stick /////////////
+      /////////////first water////////////
       {
-        "name": "stick1",
         "position": [0, 0.1, -12],
         "rotation": [90, 90, 0],
-        "scale": [0.09, 1, 0.2],
+        "scale": [0.2, 1, 0.2],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -1004,33 +1004,13 @@
           {
             "type": "WoodMovement",
             "linearVelocity": [2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
           }
         ]
       },
       {
-        "name": "stick1",
-        "position": [10, 0.1, -12],
-        "rotation": [90, 90, 0],
-        "scale": [0.09, 1, 0.2],
-        "components": [
-          {
-            "type": "Mesh Renderer",
-            "mesh": "stick",
-            "material": "stick"
-          },
-          {
-            "type": "WoodMovement",
-            "linearVelocity": [2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
-          }
-        ]
-      },
-      {
-        "name": "stick1",
         "position": [5, 0.1, -12],
         "rotation": [90, 90, 0],
-        "scale": [0.09, 1, 0.2],
+        "scale": [0.2, 1, 0.2],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -1040,15 +1020,29 @@
           {
             "type": "WoodMovement",
             "linearVelocity": [2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
           }
         ]
       },
       {
-        "name": "stick1",
+        "position": [10, 0.1, -12],
+        "rotation": [90, 90, 0],
+        "scale": [0.2, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+          }
+        ]
+      },
+      {
         "position": [-5, 0.1, -12],
         "rotation": [90, 90, 0],
-        "scale": [0.09, 1, 0.2],
+        "scale": [0.2, 1, 0.2],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -1058,15 +1052,31 @@
           {
             "type": "WoodMovement",
             "linearVelocity": [2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
+          }
+        ]
+      },
+
+      /////////////second water////////////
+      {
+        "position": [2, 0.1, -26],
+        "rotation": [90, 90, 0],
+        "scale": [0.2, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
           }
         ]
       },
       {
-        "name": "stick1",
-        "position": [-10, 0.1, -12],
+        "position": [7, 0.1, -26],
         "rotation": [90, 90, 0],
-        "scale": [0.09, 1, 0.2],
+        "scale": [0.2, 1, 0.2],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -1076,14 +1086,46 @@
           {
             "type": "WoodMovement",
             "linearVelocity": [2, 0, 0]
-            // "angularVelocity": [0, 45, 0]
           }
         ]
       },
+      {
+        "position": [13, 0.1, -26],
+        "rotation": [90, 90, 0],
+        "scale": [0.2, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+          }
+        ]
+      },
+      {
+        "position": [-6, 0.1, -26],
+        "rotation": [90, 90, 0],
+        "scale": [0.2, 1, 0.2],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "stick",
+            "material": "stick"
+          },
+          {
+            "type": "WoodMovement",
+            "linearVelocity": [2, 0, 0]
+          }
+        ]
+      },
+
       //////////////finish//////////////
       {
         "name": "finish1",
-        "position": [-0.5, -0.6, -29.59],
+        "position": [-0.55, -0.6, -29.59],
         "rotation": [90, 0, 0],
         "scale": [0.6, 0.6, 0.6],
         "components": [
@@ -1096,7 +1138,7 @@
       },
       {
         "name": "finish2",
-        "position": [0.5, -0.6, -29.59],
+        "position": [0.55, -0.6, -29.59],
         "rotation": [90, 0, 0],
         "scale": [0.6, 0.6, 0.6],
         "components": [
@@ -1109,7 +1151,7 @@
       },
       {
         "name": "finish3",
-        "position": [1.5, -0.6, -29.59],
+        "position": [1.55, -0.6, -29.59],
         "rotation": [90, 0, 0],
         "scale": [0.6, 0.6, 0.6],
         "components": [
