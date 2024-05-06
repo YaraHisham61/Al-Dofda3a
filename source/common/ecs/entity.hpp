@@ -2,6 +2,7 @@
 
 #include "component.hpp"
 #include "transform.hpp"
+#include "../components/lighting.hpp"
 #include <list>
 #include <iterator>
 #include <string>
@@ -141,6 +142,15 @@ namespace our
                     ImGui::InputFloat3("position", glm::value_ptr(localTransform.position), 3, 0.0f);
                     ImGui::InputFloat3("rotation", glm::value_ptr(localTransform.rotation), 3, 0.0f);
                     ImGui::InputFloat3("scaling", glm::value_ptr(localTransform.scale), 3, 0.0f);
+            if (auto lightcomponent = getComponent<lightingComponent>(); lightcomponent)
+                    {
+                        ImGui::InputFloat3("lightposition", glm::value_ptr(lightcomponent->position), 3, 0.0f);
+                        ImGui::InputFloat3("direction", glm::value_ptr(lightcomponent->direction), 3, 0.0f);
+                        ImGui::InputFloat3("color", glm::value_ptr(lightcomponent->color), 3, 0.0f);
+                        ImGui::InputFloat3("attenuation", glm::value_ptr(lightcomponent->attenuation), 3, 0.0f);
+                        ImGui::InputFloat3("specular", glm::value_ptr(lightcomponent->specular), 3, 0.0f);
+                        ImGui::InputFloat3("position", glm::value_ptr(lightcomponent->cone_angles), 2, 0.0f);
+                    }
                 }
             }
         }

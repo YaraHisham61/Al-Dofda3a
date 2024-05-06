@@ -384,10 +384,34 @@
       },
       //////////////////////lamp////////////////////
       {
-        "name": "spot_lamp",
+        "name": "spot_lamp1",
         "scale": [0.001, 0.001, 0.001],
-        "position": [1, 0.5, 0.5],
-        "rotation": [0, 0, 0],
+        "position": [-5, 0.5, -0.5],
+        "rotation": [0, 90, 0],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "spot_lamp",
+            "material": "spot_lamp"
+          },
+          {
+            "type": "lighting",
+            "Typed": 2,
+            "direction": [0.5,-0.6,-0.4],
+            "position": [1.5, 1.5, -550],
+            "color": [0.7, 0.7, 0.7],
+            "specular": [0.7, 0.7, 0.7],
+            "attenuation": [0.01, 0.01, 0.01],
+            "cone_angles.inner": 20,
+            "cone_angles.outer": 50
+          }
+        ]
+      },
+      {
+        "name": "spot_lamp2",
+        "scale": [0.001, 0.001, 0.001],
+        "position": [6, 0.8, -0.5],
+        "rotation": [0, 90, 0],
         "components": [
           {
             "type": "Mesh Renderer",
@@ -398,8 +422,56 @@
             "type": "lighting",
             "Typed": 2,
             "direction": [0.5,-0.5,-0.4],
-            "position": [1, 1.5, 0.5],
-            "diffuse": [0.2, 0.2, 0.2],
+            "position": [1.5, 1.5, -550],
+            "color": [0.7, 0.7, 0.7],
+            "specular": [0.7, 0.7, 0.7],
+            "attenuation": [0.01, 0.01, 0.01],
+            "cone_angles.inner": 20,
+            "cone_angles.outer": 50
+          }
+        ]
+      },
+      {
+        "name": "spot_lamp3",
+        "scale": [0.001, 0.001, 0.001],
+        "position": [-5, 0.5, -14.5],
+        "rotation": [0, 90, 0],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "spot_lamp",
+            "material": "spot_lamp"
+          },
+          {
+            "type": "lighting",
+            "Typed": 2,
+            "direction": [0.5,-0.5,-0.4],
+            "position": [1.5, 1.5, -550],
+            "color": [0.7, 0.7, 0.7],
+            "specular": [0.7, 0.7, 0.7],
+            "attenuation": [0.01, 0.01, 0.01],
+            "cone_angles.inner": 20,
+            "cone_angles.outer": 50
+          }
+        ]
+      },
+      {
+        "name": "spot_lamp4",
+        "scale": [0.001, 0.001, 0.001],
+        "position": [6, 0.8, -14.5],
+        "rotation": [0, 90, 0],
+        "components": [
+          {
+            "type": "Mesh Renderer",
+            "mesh": "spot_lamp",
+            "material": "spot_lamp"
+          },
+          {
+            "type": "lighting",
+            "Typed": 2,
+            "direction": [0.5,-0.5,-0.4],
+            "position": [1.5, 1.5, -550],
+            "color": [0.7, 0.7, 0.7],
             "specular": [0.7, 0.7, 0.7],
             "attenuation": [0.01, 0.01, 0.01],
             "cone_angles.inner": 20,
