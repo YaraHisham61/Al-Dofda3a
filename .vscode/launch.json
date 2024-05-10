@@ -9,7 +9,7 @@
       "type": "cppvsdbg",
       "request": "launch",
       "program": "${workspaceFolder}/bin/GAME_APPLICATION.exe",
-      "args": ["-c", "./config/y.jsonc"],
+      "args": ["-c", "./config/game.jsonc"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
