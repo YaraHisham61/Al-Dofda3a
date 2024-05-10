@@ -37,7 +37,7 @@ namespace our
     {
 
     public:
-        void getFrogEntity(World *world)
+        void init(World *world)
         {
             for (auto entity : world->getEntities())
             {
@@ -225,10 +225,10 @@ namespace our
                     }
                 }
             }
-            updateHearts(app);
+            updateHearts(app, world);
         }
 
-        void updateHearts(Application *app)
+        void updateHearts(Application *app,World *world)
         {
             switch (heartsLeft)
             {
@@ -243,10 +243,30 @@ namespace our
             }
             if (heartsLeft < 0)
             {
+                exit();
                 std::cout << "NO HEARTS LEFT!" << std::endl;
                 heartsLeft = 2;
                 app->changeState("game-over");
+                init(world);
             }
+        }
+
+        void exit()
+        {
+            frogCamera = nullptr;
+            frog = nullptr;
+            heartsLeft = 2;
+            heart1 = nullptr;
+            heart2 = nullptr;
+            heart3 = nullptr;
+            wallL = nullptr;
+            wallR = nullptr;
+            frontWall1 = nullptr;
+            frontWall2 = nullptr;
+            frontWallExtend2 = nullptr;
+            skull = nullptr;
+            skullTimer = 0.0f;
+            woods.clear();
         }
     };
 }
