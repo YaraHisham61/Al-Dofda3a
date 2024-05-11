@@ -15,6 +15,7 @@
 #include <unordered_map>
 #include <iostream>
 
+
 namespace our
 {
     static Entity *frogCamera;
@@ -31,7 +32,7 @@ namespace our
     static Entity *skull;
     static float skullTimer = 0.0f;
 
-    std::unordered_map<float, std::vector<Entity *>> woods;
+    static std::unordered_map<float, std::vector<Entity *>> woods;
     // The Collision system is responsible for detecting collision of frog with every car which contains a CarMovementComponent.
     class CollisionSystem
     {
@@ -243,11 +244,9 @@ namespace our
             }
             if (heartsLeft < 0)
             {
-                exit();
                 std::cout << "NO HEARTS LEFT!" << std::endl;
                 heartsLeft = 2;
                 app->changeState("game-over");
-                init(world);
             }
         }
 
